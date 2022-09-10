@@ -1,0 +1,369 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx} 
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+\begin{document}
+
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+    \center
+
+    \textsc{\LARGE Delft University of Technology}\\[1cm]
+
+    \textsc{\Large Reasoning \& Logic}\\[0.2cm]
+    \textsc{\large CSE1300}\\[1cm]
+    \HRule \\[0.8cm]
+    { \huge \bfseries Assignment: TA-check 1}\\[0.7cm]
+    \HRule \\[2cm]
+    \large
+    \emph{Authors:}\\
+    Joris Rijs (5880998) \& Sebastiaan Beekman (5885116)\\[1.5cm]
+    {\large \today}\\[5cm]
+    \includegraphics[width=0.6\textwidth]{images/TU_delft_logo.jpg}\\[1cm]
+    \vfill
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Question 1}
+Consider the following claims and arguments written in English. Formulate a logically precise claim in
+propositional logic using logical operators to represent the claim. For instance for “I like puzzles and I
+like tea”, one might use p $\wedge $ q where p is “I like puzzles” and r is “I like tea.”.
+\\\\
+\textbf{(a). I do this homework, then I have a greater chance at passing the course}
+\begin{itemize}
+    \item p = "I do this homework"
+    \item q = "I have a greater chance at passing the course"
+    \item p $\rightarrow $ q
+\end{itemize}
+\ \\
+\textbf{(b). Only if I do this homework will I get feedback from TA's}
+\begin{itemize}
+    \item p = "I do this homework"
+    \item q = "I get feedback from TA's"
+    \item p $\leftrightarrow $ q
+\end{itemize}
+\ \\
+\textbf{(c). I can choose to do the MC-test in week 3 or I can choose not to}
+\begin{itemize}
+    \item p = "I can choose to do the MC-test in week 3"
+    \item p $\vee $ $\neg $p
+\end{itemize}
+\ \\
+\textbf{(d).}\\
+If I pass the course, then I have practiced well.\\
+If I pass the course, then I have passed the endterm.\\
+\underline{I have practiced well and passed the endterm.}\\
+Therefore, I have passed the course.
+\begin{itemize}
+    \item p = "I pass the course"
+    \item q = "I practice well"
+    \item r = "I pass the endterm"
+    \item ((p $\rightarrow $ q) $\wedge $ (p $\rightarrow $ r) $\wedge $ (q $\wedge $ r)) $\rightarrow $ p
+\end{itemize}
+\ \\
+\textbf{(e).}\\
+It is not true that: I do the homework and I do not get feedback from TA's.\\
+I do the homework or I do not have a greater chance of passing the course.\\
+\underline{I do not get feedback from the TA's}\\
+Therefore, I do not have a greater chance of passing the course.
+\begin{itemize}
+    \item p = "I do the homework"
+    \item q = "I get feedback from TA's"
+    \item r = "I have a greater changce of passing the course"
+    \item (($\neg $(p $\wedge $ ($\neg $q))) $\wedge $ (p $\vee $ ($\neg $r)) $\wedge $ ($\neg $q)) $\rightarrow $ ($\neg $r)
+\end{itemize}
+
+\newpage
+\section{Question 2}
+Answer each of the following questions in at most 5 lines of text (excluding truth tables if required). For
+each of the questions (which consist of just an argument) indicate if the argument is valid or not. If they
+are valid, prove it using a truth table. If they are invalid, prove it using a counterexample and explain
+how this counterexample shows the argument to be invalid.
+\\\\
+\textbf{(a). Explain why we need a full truth table to show an argument is valid, but why only a
+    counterexample suffices to show an argument is invalid}\\
+An argument is valid if, and only if, in every situation where all premises are true, the conclusion is also true. This means that if we can find a situation where all premises are true, but the conclusion is false, the argument is invalid. This is why a counterexample suffices to show an argument is invalid.
+\\\\
+\textbf{(b). p $\rightarrow $ q, $\neg $q $\therefore $ $\neg $p (Valid)}\\
+\begin{displaymath}
+    \begin{array}{|c c|c|}
+        p & q & ((p \rightarrow q) \wedge (\neg q)) \rightarrow (\neg p) \\
+        \hline
+        0 & 0 & 1                                                        \\
+        0 & 1 & 1                                                        \\
+        1 & 0 & 1                                                        \\
+        1 & 1 & 1                                                        \\
+    \end{array}
+\end{displaymath}
+\ \\
+\textbf{(c). p $\rightarrow $ q, p $\rightarrow $ r, q $\rightarrow $ r, $\therefore $ p (Invalid)}\\
+\begin{displaymath}
+    \begin{array}{|c c c|c|}
+        p & q & r & ((p \rightarrow q) \wedge (p \rightarrow r) \wedge (q \rightarrow r)) \rightarrow p \\
+        \hline
+        0 & 0 & 0 & 0                                                                                   \\
+        0 & 0 & 1 & 0                                                                                   \\
+        0 & 1 & 0 & 1                                                                                   \\
+        0 & 1 & 1 & 0                                                                                   \\
+        \hline
+        1 & 0 & 0 & 1                                                                                   \\
+        1 & 0 & 1 & 1                                                                                   \\
+        1 & 1 & 0 & 1                                                                                   \\
+        1 & 1 & 1 & 1                                                                                   \\
+    \end{array}
+\end{displaymath}
+\ \\
+\textbf{(d). $\neg $(p $\wedge $ ($\neg $q)), p $\vee $ ($\neg $r), $\neg $q $\therefore $ $\neg $r (Invalid)}\\
+\begin{displaymath}
+    \begin{array}{|c c c|c|}
+        p & q & r & ((\neg (p \wedge (\neg q))) \wedge (p \vee (\neg r)) \wedge (\neg q)) \rightarrow (\neg r) \\
+        \hline
+        0 & 0 & 0 & 0                                                                                          \\
+        0 & 0 & 1 & 1                                                                                          \\
+        0 & 1 & 0 & 1                                                                                          \\
+        0 & 1 & 1 & 1                                                                                          \\
+        \hline
+        1 & 0 & 0 & 1                                                                                          \\
+        1 & 0 & 1 & 1                                                                                          \\
+        1 & 1 & 0 & 1                                                                                          \\
+        1 & 1 & 1 & 1                                                                                          \\
+    \end{array}
+\end{displaymath}
+\ \\
+\textbf{(e). Consider an argument without any premises. Explain when such an argument is valid and when such an argument is invalid}\\
+An argument without premises is valid when the conclusion is a tautology. Otherswise, it is invalid.
+\\\\
+\textbf{(f). $\therefore $ (p $\rightarrow $ q) $\rightarrow $ $\neg $(p $\wedge $ $\neg $q) (Valid)}\\
+\begin{displaymath}
+    \begin{array}{|c c|c|}
+        p & q & (p \rightarrow q) \rightarrow \neg (p \wedge \neg q) \\
+        \hline
+        0 & 1 & 1                                                    \\
+        0 & 1 & 1                                                    \\
+        1 & 0 & 1                                                    \\
+        1 & 1 & 1                                                    \\
+    \end{array}
+\end{displaymath}
+\ \\\\\\
+\textbf{(g). Consider a new ternary operator p $\rightarrow q$ r, such that when q is false p $\rightarrow q$ r is equivalent to p $\leftrightarrow $ r, and when q is true p $\rightarrow q$ r is equivalent to p $\wedge $ $\neg $r. Give a truth table for p $\rightarrow q$ r (Invalid)}
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|c|}
+        p & q & r & p \leftrightarrow r & p \wedge \neg r & p \rightarrow q r \\
+        \hline
+        0 & 0 & 0 & 1                   & X               & 1                 \\
+        0 & 0 & 1 & 0                   & X               & 0                 \\
+        0 & 1 & 0 & X                   & 0               & 0                 \\
+        0 & 1 & 1 & X                   & 0               & 0                 \\
+        \hline
+        1 & 0 & 0 & 0                   & X               & 0                 \\
+        1 & 0 & 1 & 1                   & X               & 1                 \\
+        1 & 1 & 0 & X                   & 1               & 1                 \\
+        1 & 1 & 1 & X                   & 0               & 0                 \\
+    \end{array}
+\end{displaymath}
+\newpage
+\section{Question 3}
+For each of the following pairs of statements, indicate if they are equivalent and explain why (not) using a truth table. In case of unequivalent statements an incomplete truth table suffices.
+\\\\
+\textbf{(a). (p $\vee $ (q  $\wedge $ r)) $\equiv ?$ ($\neg $p $\rightarrow $ (q $\wedge $ r)) (Valid)}\\
+($\neg $p $\rightarrow $ (q $\wedge $ r)) $\equiv $ (p $\vee $ (q  $\wedge $ r)) | De Morgan's
+\\\\
+\textbf{(b). (p $\vee $ q) $\rightarrow $ (r $\vee $ q) $\equiv ?$ ($\neg $r $\vee $ $\neg $q) $\rightarrow $ ($\neg $p $\vee $ $\neg $q) (Invalid)}\\
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|}
+        p & q & r & (p \vee q) \rightarrow (r \vee q) & (\neg r \wedge \neg q) \rightarrow (\neg p \vee \neg q) \\
+        \hline
+        0 & 0 & 0 & 1                                 & 1                                                       \\
+        0 & 0 & 1 & 1                                 & 1                                                       \\
+        0 & 1 & 0 & 1                                 & 1                                                       \\
+        0 & 1 & 1 & 1                                 & 1                                                       \\
+        \hline
+        1 & 0 & 0 & 0                                 & 1                                                       \\
+        1 & 0 & 1 & 1                                 & 1                                                       \\
+        1 & 1 & 0 & 1                                 & 0                                                       \\
+        1 & 1 & 1 & 1                                 & 1                                                       \\
+    \end{array}
+\end{displaymath}
+\ \\
+\textbf{(c). (q $\vee $ (p  $\rightarrow $ q)) $\equiv ?$ $\neg $($\neg $q $\wedge $ (p $\wedge $ $\neg $q)) (Valid)}\\
+(q $\vee $ $\neg $(p $\wedge $ $\neg $q)) $\equiv $ $\neg $($\neg $q $\wedge $ (p $\wedge $ $\neg $q))\\
+(q $\vee $ ($\neg $p $\vee $ q))\\
+(q $\vee $ (p $\rightarrow $ q))
+\\\\
+\textbf{(d). (($\neg $s $\leftrightarrow $ p) $\wedge $ (r $\rightarrow $ p)) $\equiv ?$ (($\neg $p $\wedge $ $\neg $r $\wedge $ $\neg $s) $\vee $ (p $\wedge $ s)) (Invalid)}\\
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|}
+        p & r & s & ((\neg s \leftrightarrow p) \wedge (r \rightarrow p)) & ((\neg p \wedge \neg r \wedge \neg s) \vee (p \wedge s)) \\
+        \hline
+        0 & 0 & 0 & 0                                                     & 1                                                        \\
+        0 & 0 & 1 & 1                                                     & 0                                                        \\
+        0 & 1 & 0 & 0                                                     & 0                                                        \\
+        0 & 1 & 1 & 0                                                     & 0                                                        \\
+        \hline
+        1 & 0 & 0 & 1                                                     & 0                                                        \\
+        1 & 0 & 1 & 0                                                     & 1                                                        \\
+        1 & 1 & 0 & 1                                                     & 0                                                        \\
+        1 & 1 & 1 & 0                                                     & 1                                                        \\
+    \end{array}
+\end{displaymath}
+
+
+\newpage
+\section{Question 4}
+For every formula in propositional calculus it is possible to rewrite it to a formula in disjunctive normal form (DNF). A formula in this form consists of a disjunction of conjunctions, with the conjunctions consisting of loose atoms and/or their negations. Formula F = (p1 $\wedge $ $\neg $p2) contains a single conjunction and is therefore in disjunctive normal form.
+\\\\
+\textbf{(a). p $\vee $ $\neg $(q $\wedge $ r)}\\
+p $\vee $ $\neg $q $\vee $ $\neg $r
+\\\\
+\textbf{(b). $\neg $(p $\wedge $ (q $\vee $ r))}\\
+$\neg $p $\vee $ $\neg $(q $\vee $ r)\\
+$\neg $p $\vee $ ($\neg $q $\wedge $ $\neg $r)
+\\\\
+\textbf{(c). $\neg $(p $\rightarrow $ q) $\wedge $ (p $\rightarrow $ r)}\\
+$\neg $($\neg $p $\vee $ q) $\wedge $ ($\neg $p $\vee $ r)\\
+(p $\wedge$ $\neg $q) $\wedge $ ($\neg $p $\vee $ r)\\
+(p $\wedge $ $\neg $q $\wedge $ $\neg $p) $\vee $ (p $\wedge $ $\neg $q $\wedge $ r)\\
+F $\vee $ (p $\wedge $ $\neg $q $\wedge $ r)\\
+(p $\wedge $ $\neg $q $\wedge $ r)
+\\\\
+\textbf{(d). $\neg $((p $\wedge $ q) $\leftrightarrow $ (r $\vee $ s))}\\
+$\neg $(((p $\wedge $ q) $\rightarrow $ (r $\vee $ s)) $\wedge $ ((r $\vee $ s) $\rightarrow $ (p $\wedge $ q)))\\
+$\neg $((($\neg $p $\vee $ $\neg $q) $\vee $ (r $\vee $ s)) $\wedge $ (($\neg $r $\wedge $ $\neg $s) $\vee $ (p $\wedge $ q)))\\
+$\neg $(($\neg $p $\vee $ $\neg $q) $\vee $ (r $\vee $ s)) $\vee $ $\neg $(($\neg $r $\wedge $ $\neg $s) $\vee $ (p $\wedge $ q))\\
+($\neg $($\neg $p $\vee $ $\neg $q) $\wedge $ $\neg $(r $\vee $ s)) $\vee $ ($\neg $($\neg $r $\wedge $ $\neg $s) $\wedge $ $\neg $(p $\wedge $ q))\\
+((p $\wedge $ q) $\wedge $ ($\neg $r $\wedge $ $\neg $s)) $\vee $ ((r $\vee $ s) $\wedge $ ($\neg $p $\vee $ $\neg $q))\\
+(p $\wedge $ q $\wedge $ $\neg $r $\wedge $ $\neg $s) $\vee $ ((r $\vee $ s) $\wedge $ ($\neg $p $\vee $ $\neg $q))\\
+Stuck...
+\\\\
+
+\newpage
+\section{Question 5}
+Translate the following statements to a first-order language. Each time, you should first name the
+symbols you will use, along with their meaning, such as predicate symbols (usually capital letters
+such as B(x,y) or Brother(x,y) for 'x is the brother of y,' or W(x,y) for 'x wants y'), and constants
+(small letters without argument, such as j for 'John'). You can reuse symbols in later subquestions,
+as long as you do not define new symbols with the same name but a different meaning.
+You should think about what objects should be constants, and what objects should not be. For
+example, if you were to translate: “Stefan is a lecturer”, then “Stefan” refers to a specific object in
+your domain and should thus be a constant. On the other hand, being a lecturer is a property that
+objects can (not) have and thus should be a predicate. Thus you could translate this as Lecturer psq
+where s is Stefan and Lecturer pxq means “x is a lecturer”.
+Remember that predicates should define only a single property, and not secretly introduce new
+objects. E.g., A(x) for 'x owns an aviation license' is incorrect! This predicate now does two things,
+both positing that an object exists which is an aviation license, and also showing a relation between
+x and this license.
+\\\\
+\textbf{(I). All lawyers are happy}
+\begin{itemize}
+    \item H(x): "x is happy"
+    \item Domain: [Lawyers]
+    \item $\forall $x H(x)
+\end{itemize}
+\ \\
+\textbf{(II). Phoenix is a lawyer}
+\begin{itemize}
+    \item L(x): "x is a lawyer"
+    \item L(Phoenix)
+\end{itemize}
+\ \\
+\textbf{(III). Maya eats a burger}
+\begin{itemize}
+    \item E(x,y): "x eats y"
+    \item E(Maya, burger)
+\end{itemize}
+\ \\
+\textbf{(IV). Maya eats burgers}
+\begin{itemize}
+    \item E(x,y): "x eats y"
+    \item Domain: [Burgers]
+    \item $\forall $x E(Maya, x)
+\end{itemize}
+\ \\
+\textbf{(V). Maya was helped by Phoenix, who also helped Maya's cousin}
+\begin{itemize}
+    \item H(x,y): "x helped y"
+    \item H(Phoenix, Maya) $\wedge $ H(Phoenix, Maya's cousin)
+\end{itemize}
+\ \\
+\textbf{(VI). CSE1300 students are the only ones who know about Phoenix}
+\begin{itemize}
+    \item K(x,y): "x knows y"
+    \item Domain: [CSE1300 Students]
+    \item $\forall $x K(x, Phoenix)
+\end{itemize}
+\ \\
+\textbf{(VII). Phoenix is never someone's only help}
+\begin{itemize}
+    \item H(x,y): "x helped y"
+    \item $\exists $x $\exists $y (H(Phoenix, x) $\wedge $ H(y, x) $\wedge $ (Phoenix $\neq $ y))
+\end{itemize}
+\newpage
+\textbf{(VIII). There is no lawyer without a badge who only defended one case}
+\begin{itemize}
+    \item L(x): "x is a lawyer"
+    \item B(x): "x has a badge"
+    \item D(x,y): "x defended y"
+    \item $\exists $x $\exists $y $\forall $z (L(x) $\wedge $ $\neg $B(x) $\wedge $ D(x,y) $\wedge $ (D(x,z) $\rightarrow $ z=y))
+\end{itemize}
+\ \\
+Suppose we have the domain D = \{a1, a2, a3, p1, p2, p3, p4, p5, p6, u1, u2, u3, u4\}, the predicates
+D(x,y), P(x,y,z), U(x,y) and A(x,y). The interpretations of these symbols is as follows: D(x,y)
+means paper x is stored in database y, P(x,y,z) means x has published paper y at university z,
+U(x,y) means university x uses database y and lastly A(x,y) means author x wrote paper y.
+Now form natural language sentences for the following first-order sentences. You are allowed to use
+the constants from the domain in your sentences, or you can assign (consistent) natural names to
+them.
+\\\\
+\textbf{(I). P(a1, p1, u3)}\\
+a1 has published p1 at u3.
+\\\\
+\textbf{(II). $\exists $x P(a2, x, u2)}\\
+a2 has published at least one paper at u2.
+\\\\
+\textbf{(III). $\exists $x$\forall $y$\forall $z ($\neg $(P(y, z, x)))}\\
+There is a university that has no papers published by any authors.
+\\\\
+\textbf{(IV). $\forall $w$\forall $x$\forall $y$\forall $z ((P(w,x,y) $\wedge $ D(x,z)) $\rightarrow $ U(y,z)) }\\
+If every paper published at an university can be found in a database, then that university uses said database.
+\\\\
+\textbf{(V). $\forall $x$\exists $y$\exists $z(A(y,x) $\wedge $ A(z, x) $\wedge $ $\neg $(y = z))}\\
+Every paper has at least two authors.
+\\\\
+
+\newpage
+\section{Question 6}
+\textbf{(a). In your own words, describe the principle of explosion. Also provide an example of an argument that uses it}
+The principle of explosion the principle that any statement can be proven to be true from a contradiction. For example:\\
+P: "Grass is green" \& Q: "Stefan is a lizzard in a human suit"\\
+P, $\neg $P, P $\vee $ Q $\therefore$ Q\\
+We can prove that Q is true from the contradiction that P and $\neg $P are both true.\\
+WE KNEW IT!
+\\\\
+\textbf{(b). Prove that with just \{$\neg$, $\rightarrow $\} we can emulate the \{$\wedge$, $\vee $, $\leftrightarrow $\} operators. In other words, show that \{$\neg$, $\rightarrow $\} is functionally complete}\\
+P $\rightarrow $ Q $\equiv $ $\neg $P $\vee $ Q\\
+($\neg$P) $\rightarrow $ Q $\equiv $ P $\vee $ Q\\
+$\neg$(P $\rightarrow $ ($\neg$Q)) $\equiv $ P $\wedge $ Q\\
+P $\leftrightarrow $ Q $\equiv $ (P $\rightarrow $ Q) $\wedge $ (Q $\rightarrow $ P) $\equiv $ $\neg$((p $\rightarrow $ Q) $\rightarrow $ $\neg$(Q $\rightarrow $ P))
+\\\\
+\textbf{(c). The operator p $\rightarrow q$ r from earlier in this homework is functionally complete. Prove this.}\\
+Tried many different ways to prove this, but we can't seem to get it.
+\\\\
+\textbf{(d). Consider the truth table for a compound proposition with 7 unique atoms and 143 connectives. How many different configurations can the column for the main connective have?}\\
+\(2^7\) = 128 rows.\\
+\(2^128\) = 3.4 * \(10^38\) possible configurations.
+\\\\
+\textbf{(e). Does the order of quantifiers matter? Give an example to support your answer.}\\
+Yes, the order of quantifiers matter. For example, $\forall $x $\exists $y P(x,y) is not the same as $\exists $y $\forall $x P(x,y). The first one means that for every x, there exists a y such that P(x,y), while the second one means that there exists a y such that for every x, P(x,y).
+\\\\
+\textbf{(f). Reflection}\\
+Most diffecult: 4c, 4d (Mostly a lot of work which induces mistakes) \& 6c\\
+Improve speed: 5
+\end{document}
