@@ -1,0 +1,156 @@
+\documentclass[a4paper,twoside,openright]{book}
+\usepackage[greek,british]{babel}
+
+% ams maths
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% bibliography
+\usepackage[numbers]{natbib}
+%\renewcommand{\bibname}{Further Reading}
+\addto{\captionsbritish}{\renewcommand{\bibname}{Further Reading}}
+\usepackage[nottoc]{tocbibind}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usetikzlibrary{arrows,shapes,positioning,automata}
+\tikzstyle{triangle}=[inner sep=0cm,fill opacity=0.6, minimum height = 0.9cm, regular polygon,  regular polygon sides=3]
+\tikzstyle{square}=[fill opacity=0.6, minimum height = 0.4cm, regular polygon,  regular polygon sides=4]
+\tikzstyle{mycircle}=[fill opacity=0.6, minimum size = 0.4cm, circle]
+
+% tables
+\usepackage{longtable}
+\usepackage{booktabs}
+
+%\usepackage{fontawesome}
+\usepackage{awesomebox}
+\setlength{\aweboxleftmargin}{9mm}
+\setlength{\aweboxsignraise}{-5mm}
+\newcommand{\personbox}[2]{\awesomebox[cyan]{2pt}{\faUser}{cyan}{#1}}
+\newcommand{\examplebox}[2]{\awesomebox[Green]{2pt}{\faLightbulb}{Green}{#1}}
+\newcommand{\applicationbox}[2]{\awesomebox[cyan]{2pt}{\faDesktop}{cyan}{#1}}
+
+%% fonts
+%https://tex.stackexchange.com/questions/50586/how-to-use-palatino-like-math-fonts-in-xelatex
+\usepackage{fontspec}
+%\usepackage{palatino}
+\usepackage[sc]{mathpazo}
+\usepackage[mathscr]{eucal}
+%\setmainfont[
+%    Path = fonts/,
+%    Extension = .ttc,
+%%  BoldFont = *-Bold,
+%%  ItalicFont = *-Italic,
+%%  BoldItalicFont = *-BoldItalic,
+%    Ligatures=TeX
+%%  %SmallCapsFont={TeX Gyre Termes},
+%%  %SmallCapsFeatures={Letters=SmallCaps},
+%]{Palatino}
+\setmainfont
+     [ BoldFont       = texgyrepagella-bold.otf ,
+       ItalicFont     = texgyrepagella-italic.otf ,
+       BoldItalicFont = texgyrepagella-bolditalic.otf ]
+     {texgyrepagella-regular.otf}
+%\usepackage{unicode-math}
+%\setmathfont[
+%    Path = fonts/,
+%    Extension = .ttf
+%]{CambriaMath}
+%% instead of package contour, we use these becaus xelatex: see https://tex.stackexchange.com/questions/421970/contour-text-in-xelatex
+
+% problem environment, for exercises
+\newcounter{problemcounter}
+\newcounter{partcounter}[problemcounter]
+
+\newcommand{\Item}[1]{\par\hangafter=0
+                         \hangindent=15pt
+                         \noindent\llap{#1}\ignorespaces}
+\newcommand{\IItem}[1]{\par\hangafter=0
+                         \hangindent=40pt
+                         \noindent\llap{#1}\ignorespaces}
+
+\newcommand{\problem}{\smallskip\stepcounter{problemcounter}\Item{\bfseries\arabic{problemcounter}.\ }}
+\newfontfamily\daggerfont[Ligatures=TeX]{Garamond-Math.otf}
+\newcommand{\solutionmark}{{\daggerfont\textdagger}}
+%\newcommand{\problemsol}{\smallskip\stepcounter{problemcounter}\Item{(\solutionmark)\bfseries\arabic{problemcounter}.\ }}
+\newcommand{\problemsol}{\smallskip\stepcounter{problemcounter}\Item{\solutionmark\bfseries\arabic{problemcounter}.\ }}
+\newcommand{\ppart}{\stepcounter{partcounter}\IItem{\bfseries\alph{partcounter})\ }}
+\newcommand{\pparts}[1]{\vskip\parskip
+   \halign{\hskip40pt\stepcounter{partcounter}\llap{\bfseries\alph{partcounter})\ }$##$\qquad\hfil&&
+            \hskip30pt\stepcounter{partcounter}\llap{\bfseries\alph{partcounter})\ }$##$\qquad\hfil\cr
+   #1\crcr}}
+%\tparts is same as \pparts, but doesn't use math mode
+\newcommand{\tparts}[1]{\vskip\parskip
+   \halign{\hskip40pt\stepcounter{partcounter}\llap{\bfseries\alph{partcounter})\ }##\qquad\hfil&&
+            \hskip30pt\stepcounter{partcounter}\llap{\bfseries\alph{partcounter})\ }##\qquad\hfil\cr
+   #1\crcr}}
+\newenvironment{exercises}
+   {\setcounter{problemcounter}{0}
+    \bigbreak\medbreak
+    \leftline{\bfseries\large Exercises}
+    \medskip
+    \small}
+   {}
+\newcounter{solutioncounter}
+\newcounter{spartcounter}[solutioncounter]
+\newenvironment{solutions}
+   {\setcounter{solutioncounter}{0}
+    \bigbreak\medbreak
+    %\leftline{\bfseries\large Selected Solutions}
+    \medskip
+    \small}
+   {}
+
+\newcommand{\solution}{\smallskip\stepcounter{solutioncounter}\Item{\bfseries\arabic{solutioncounter}.\ }}
+\newcommand{\spart}{\stepcounter{spartcounter}\IItem{\bfseries\alph{spartcounter})\ }}
+\newcommand{\sparts}[1]{\vskip\parskip
+   \halign{\hskip40pt\stepcounter{spartcounter}\llap{\bfseries\alph{spartcounter})\ }$##$\qquad\hfil&&
+            \hskip30pt\stepcounter{spartcounter}\llap{\bfseries\alph{spartcounter})\ }$##$\qquad\hfil\cr
+   #1\crcr}}
+%\tparts is same as \pparts, but doesn't use math mode
+\newcommand{\stparts}[1]{\vskip\parskip
+   \halign{\hskip40pt\stepcounter{spartcounter}\llap{\bfseries\alph{spartcounter})\ }##\qquad\hfil&&
+            \hskip30pt\stepcounter{spartcounter}\llap{\bfseries\alph{spartcounter})\ }##\qquad\hfil\cr
+   #1\crcr}}
+
+\newcommand{\AND}{\wedge}
+\newcommand{\OR}{\vee}
+\newcommand{\NOT}{\lnot}
+\newcommand{\IMP}{\rightarrow}
+\newcommand{\IFF}{\leftrightarrow}
+\newcommand{\XOR}{\oplus}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\LOGIMP}{\Longrightarrow}
+
+%For Chapter 3
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Zpos}{{{\mathbb Z}^+}}
+\newcommand{\SUB}{\subseteq}
+\newcommand{\SUP}{\supseteq}
+\newcommand{\PSUB}{\varsubsetneq}
+\newcommand{\PSUBALT}{\subset}
+\newcommand{\PSUP}{\varsupsetneq}
+\newcommand{\SETDIFF}{\smallsetminus}   % the set difference operator.
+\newcommand{\SETDIFFALT}{-}   % Alternative
+\newcommand{\POW}{{\mathscr P}}   % For the power set of a set
+\newcommand{\st}{\,|\,}   % for the | in sets { x | P(x) }
+
+\begin{document}
+
+\input{propositional-logic.tex}
+\input{boolean-algebra.tex}
+\input{predicate-logic.tex}
+\input{deduction.tex}
+\input{proof.tex}
+\input{proof-by-contradiction.tex}
+\input{proof-induction.tex}
+\input{recursive-definitions.tex}
+\input{sets-basic.tex}
+\input{contributors.tex}
+\end{document}

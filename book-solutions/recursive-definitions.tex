@@ -1,0 +1,47 @@
+\section*{Solutions~3.7}%\ref{S-logic-4}}
+
+\begin{solutions}
+	
+	\setcounter{solutioncounter}{0}
+	\solution 
+	
+	\textit{Proof:} We prove this once again by induction. 
+	
+	\begin{itemize}
+		\item Base Case: When $n = 0$ and when $n = 1$, the statement is clearly true, since $f_0 = 0 < 1 = 2^0$ and $f_1 = 1 < 2 = 2^1$, so $f_0 < 2^0$ and $f_1 < 2^1$.
+		
+		\item Inductive Case: If we now take an arbitrary $k$ such that $k \geq 2$, we assume that $f_n < 2^n$ for $n = k-1$ and $n = k-2$ holds. 
+		To complete the induction, we need to show that $f_k < 2^k$ is also true: 
+	\end{itemize}
+	\begin{align*}
+		f_k &= f_{k-1} + f_{k-2} \\
+		&< 2^{k-1} + 2^{k-2}  &\textnormal{(inductive hypothesis)} \\
+		&= \frac{2^{k}}{2} + \frac{2^{k}}{4} \\
+		&= \frac{3}{4} \cdot 2^k \\
+		&< 2^k
+	\end{align*}	
+	
+		This shows that $f_k < 2^k$ is true, which completes the induction. 
+		
+	\solution 
+	
+	\textit{Proof:} We prove the equation using induction. 
+	
+	\begin{itemize}
+		\item Base Case: When $n = 1$, $a_1 = 1\cdot2^{1-1}$ is true since both sides are equal to 1. 
+		
+		\item Inductive Case: Let $k \geq 1$ be an arbitrary integer. We asssume that $a_n = n2^{n-1}$ holds for $n = k-1$. 
+		To complete the induction, we need to show that the equation also holds for $n = k$.
+	\end{itemize}
+	\begin{align*}
+		a_k &= 2a_{k-1} + 2^{k-1} \\
+		&= 2(k-1)2^{k-1-1} + 2^{k-1} &\text{(inductive hypothesis)} \\
+		&= (k-1)2^{k-1} + 2^{k-1} \\
+		&= ((k-1)+1)2^{k-1} \\
+		&= k2^{k-1}
+	\end{align*}	
+	
+	Which proves that the equation also holds for $n=k$. Thereby the induction is completed.  
+	
+\end{solutions}
+

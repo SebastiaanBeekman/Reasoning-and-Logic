@@ -1,0 +1,17 @@
+\section*{Solutions~3.2}%\ref{S-proof}}
+
+\begin{solutions}
+\setcounter{solutioncounter}{4}
+\solution
+The claim is: $(r \mid s) \wedge (s \mid t) \to r \mid t$.
+\begin{proof}
+	We need to show something is true for all integers $r, s, t$, so take arbitrary integers $k, m, n$ such that: $k \mid
+	m$, $m \mid n$. \\
+	Now we need to prove that $k \mid n$ holds.\\
+	Since $k \mid m$, we know that $m = ak$ for some integer $a$. Similarly $n = bm$ for some integer $b$. \\
+	Thus $n = bm = bak = ck$ with integer $c= ba$. \\
+	Thus $k \mid n$.\\
+	Since $k,m,n$ were arbitrary, this holds for all integers.
+\end{proof}
+
+\end{solutions}

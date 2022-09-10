@@ -1,0 +1,30 @@
+\section*{Solutions~2.3}%\ref{S-logic-4}}
+
+\begin{solutions}
+	\solution
+	\sparts{
+		\exists x (P(x)) & \forall x(\NOT P(x)\OR \NOT Q(x))\cr
+		\exists z(P(z) \AND \NOT Q(z))&
+		(\exists x (\NOT P(x)))\OR (\exists y (\NOT Q(y))) \cr
+		\exists x \forall y \NOT P(x,y)&
+		\forall x (\NOT R(x)\OR \exists y \NOT S(x,y))\cr
+		\forall y((\NOT P(y)\AND Q(y)) \OR (P(y) \AND \NOT Q(y)))&
+		\exists x (P(x) \AND (\forall y \NOT Q(x,y)))\cr
+	}
+\setcounter{solutioncounter}{7}
+\solution We use the predicates $\textit{Ball}(x)$ for $x$ is a ball and $\textit{Have}(x,y)$ for $x$ must have $y$. We also use a constant $\textit{you}$ to represent you.
+\[
+	\exists x (\textit{Ball}(x) \AND \forall y (x \neq y \IMP \NOT \textit{Ball}(y)) \AND \textit{Have}(\textit{you}, x))
+\]
+\setcounter{solutioncounter}{12}
+\solution Using the predicates $\textit{Person}(x)$ for $x$ is a person, $\textit{Question}(x)$ for $x$ is a question, $\textit{Answer}(x)$ for $x$ is an answer, and $\textit{Has}(x,y)$ for $x$ has $y$.
+Two different interpretations are:
+\[
+	\exists x (\textit{Person}(x) \AND \forall y (\textit{Question}(y) \IMP (\exists z (\textit{Answer}(z) \AND \textit{Has}(x,z)))))
+\]
+In other words, there is a single person who has the answers to all questions. 
+\[
+	\forall x (\textit{Question}(x) \IMP \exists y \exists z (\textit{Person}(y) \AND \textit{Answer}(z) \AND \textit{Has}(y,z)))
+\]
+In other words, every question has an answer and some person knows it (but different people might know the answer to different questions).
+\end{solutions}

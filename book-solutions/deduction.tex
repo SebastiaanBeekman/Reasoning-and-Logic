@@ -1,0 +1,137 @@
+\section*{Solutions~2.5}%\ref{deductions}}
+
+\begin{solutions}
+	\solution In order to verify the validity of \textit{modus tollens}, we need to verify that $((p \IMP q)\AND \NOT q) \IMP \NOT p$ is a tautology. This can be done by constructing the following truth table. The truth table shows that the conclusion is always true, and thus verifies that the \textit{modus tollens} is valid.\\
+	
+	\begin{tabular}{cc | ccc}
+		\toprule
+		$p$& $q$& $\overbrace{p\IMP q}^\text{A}$& $\overbrace{A \AND \NOT q}^\text{B}$& $B \IMP \NOT p$ \\
+		\midrule
+		\strut
+		0& 0& 1& 1& 1\\
+		0& 1& 1& 0& 1\\
+		1& 0& 0& 0& 1\\
+		1& 1& 1& 0& 1\\
+		\bottomrule
+	\end{tabular} \\
+	
+	To verify the validity of the Law of Syllogism, construct another truth table to show that $((p \IMP q) \AND (q \IMP r)) \IMP (p \IMP r)$ is also a tautology. 
+	
+	\solution Note that the following answers are example arguments, and that there exist many other valid answers. 
+	
+	\begin{itemize}
+		\item Since it isn't day, it must be night.
+		\item I have bread and I have cheese on top, so I have a cheese sandwich. 
+		\item I have a cheese sandwich, so I have cheese. 
+		\item Since I sing all the time, I am always singing or talking. 
+	\end{itemize}
+	
+
+  \solution
+  For both arguments when $p$ is false and $q$ is true the premises hold but the
+  conclusion does not.
+
+  \begin{itemize}
+    \item When it rains the ground is wet. The ground is wet. Therefore it rains.
+    \item When I am on a boat i am not on land. I am not on a boat. Therefore I
+      am on land.
+  \end{itemize}
+
+
+
+  \solution
+	For this set of solutions, remember that you a slightly less formal method would be to use a truth table to prove the validity of arguments in propositional logic. If you can show that in all rows where all premises are true, the conclusion is also true, then the argument must be valid!
+  \spart
+    Invalid. A counterexample for this argument is when $p$ and $q$ are false and $s$ is
+    true.
+    \spart Valid.
+    \begin{align}
+      p\wedge q && \text{(premise)}\\
+      q && \text{(from 1)}\\
+      q\rightarrow (r\vee s) && \text{(premise)}\\
+      r\vee s && \text{(from 2 and 3 by \textit{modus ponens})}\\
+      \lnot r && \text{(premise)}\\
+      s && \text{(from 4 and 5)}
+    \end{align}
+    \spart Valid.
+    \setcounter{equation}{0}
+    \begin{align}
+      p\vee q && \text{(premise)}\\
+      \lnot p  && \text{(premise)}\\
+      q && \text{(from 1 and 2)}\\
+      q\rightarrow (r\wedge s)&&\text{(premise)}\\
+      r\wedge s&&\text{(from 3 and 4 by \textit{modus ponens})}\\
+      s&&\text{(from 5)}
+    \end{align}
+    \spart Valid.
+    \setcounter{equation}{0}
+    \begin{align}
+      \lnot(q\vee t)&&\text{(premise)}\\
+      \lnot q\wedge\lnot t&&\text{(from 1 by \textit{De Morgan})}\\
+      \lnot t&&\text{(from 2)}\\
+      (\lnot p)\rightarrow t&&\text{(premise)}\\
+      \lnot(\lnot p)&&\text{(from 3 and 4 by \textit{modus tollens})}\\
+      p&&\text{(from 5)}
+    \end{align}
+    \spart Invalid. A counterexample for this argument is when $p$, $r$ and $s$
+    are true and $q$ is false.
+    \spart Valid.
+    \setcounter{equation}{0}
+    \begin{align}
+      p&&\text{(premise)}\\
+      p\rightarrow(t\rightarrow s)&&\text{(premise)}\\
+      t\rightarrow s&&\text{(from 1 and 2 by \textit{modus ponens})}\\
+      q\rightarrow t&&\text{(premise)}\\
+      q\rightarrow s&&\text{(from 3 and 4 by \textit{Law of Syllogism})}
+    \end{align}
+ 
+ 	\solution
+	\setcounter{solutioncounter}{4}
+	\spart 
+	Let $s$ = "today is a Sunday", $r$ = "it rains today" and $s$ = "it snows today". \\
+	\begin{tabular}{l}
+		$s \IMP (r \OR s)$\\
+		$s$ \\
+		$\NOT r$\\
+		\hline
+		$\therefore s$
+	\end{tabular} \\
+	This argument is valid. 
+	
+	\spart
+	Let $h$ = "there is herring on the pizza", $n$ = "Jack doesn't eat pizza", $a$ = "Jack is angry". \\
+	\begin{tabular}{l}
+		$h \IMP n$\\
+		$n \IMP a$ \\
+		$a$\\
+		\hline
+		$\therefore h$
+	\end{tabular} \\
+	The argument is invalid since we can't deduce anything from the fact that Jack is angry, there might be many more reasons for Jack to get angry. \\
+	Note that this exercise becomes harder when we translate to predicate logic instead of propositional logic. For predicate logic, "a" pizza is translated differently than "the" pizza.\\ 
+	This exercise in predicate logic would become: \\
+	Let $P(x)$ mean that $x$ is a pizza, let $H(x)$ mean that $x$ is a herring, let $On(x,y)$ mean that $x$ is on $y$, let $E(x,y)$ mean $x$ eats $y$ and finally let $A(x)$ mean that $x$ is angry. Let j = Jack. \\
+	\begin{tabular}{l}
+		$P(a)$ \\
+		$\forall x((H(x) \AND On(x,a)) \IMP \NOT E(j,a))$ \\
+		$\NOT \exists x((P(x) \AND E(j,x)) \IMP A(j))$ \\
+		$A(j)$ \\
+		\hline
+		$\therefore \exists x (H(x) \AND On(x,a))$
+	\end{tabular} \\
+	As an exercise for yourself, try to translate part c to predicate logic as well as propositional logic.
+	
+	\spart
+	Let $a$ = "it is 8:00", $l$ = "Jane studies at the library" and $h$ = "Jane works at home". \\
+	\begin{tabular}{l}
+		$a \IMP (l \OR h)$\\
+		$a$ \\
+		$\NOT l$\\
+		\hline
+		$\therefore h$
+	\end{tabular} \\
+	This argument is valid.
+	
+	
+	
+\end{solutions}

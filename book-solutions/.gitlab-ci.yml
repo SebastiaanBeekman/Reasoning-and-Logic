@@ -1,0 +1,13 @@
+stages:
+  - artifact
+  
+compile_solutions:
+  image: aergus/latex
+  stage: artifact
+  script:
+    - make
+  artifacts:
+    expire_in: 1w
+    paths:
+      - index.pdf
+

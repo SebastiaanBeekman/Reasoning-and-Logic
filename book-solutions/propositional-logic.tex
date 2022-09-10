@@ -1,0 +1,396 @@
+\section*{Solutions 2.1}%~\ref{S-logic-1}}
+
+\begin{solutions}
+\setcounter{solutioncounter}{0}
+\solution
+\begin{tabular}{cc | c}
+	\toprule
+	$p$& $q$& $p \OR q$\\
+	\midrule
+	\strut
+	0& 0& 0\\
+	0& 1& 1\\
+	1& 0& 1\\
+	1& 1& 1\\
+	\bottomrule
+\end{tabular}
+\hfill
+\begin{tabular}{cc | c}
+	\toprule
+	$p$& $q$& $p \AND q$\\
+	\midrule
+	\strut
+	0& 0& 0\\
+	0& 1& 0\\
+	1& 0& 0\\
+	1& 1& 1\\
+	\bottomrule
+\end{tabular}
+\hfill
+\begin{tabular}{c | c}
+	\toprule
+	$p$& $\NOT p$\\
+	\midrule
+	\strut
+	0& 1\\
+	1& 0\\
+	\bottomrule
+\end{tabular}
+
+\setcounter{solutioncounter}{1}
+\solution 
+\spart
+\begin{tabular}{cc | ccc}
+        \toprule
+        $p$& $q$& 
+        $\overbrace{p\IMP q}^\text{A}$ & 
+		$\overbrace{p\AND (A)}^\text{B}$ &
+        $(B)\IMP q$\\
+        \midrule
+        \strut 
+		0& 0&  1& 0& 1\\
+        0& 1&  1& 0& 1\\
+        1& 0&  0& 0& 1\\
+        1& 1&  1& 1& 1\\
+        \bottomrule
+     \end{tabular}
+ 
+\hfill\\
+Since the proposition is always true, the proposition is a tautology. 
+
+\spart
+\begin{tabular}{ccc | ccccc}
+	\toprule
+	$p$& $q$& $r$ &
+	$\overbrace{p\IMP q}^\text{A}$ & 
+	$\overbrace{q \IMP r}^\text{B}$ &
+	$\overbrace{(A)\AND (B)}^\text{C}$ &
+	$\overbrace{p \IMP r}^\text{D}$ &
+	$(C) \IMP (D)$
+	\\
+	\midrule
+	\strut 
+	0& 0&  0& 1& 1 & 1 & 1 & 1\\
+	0& 0&  1& 1& 1 & 1 & 1 & 1\\
+ 	0& 1&  0& 1& 0 & 0 & 1 & 1\\
+	0& 1&  1& 1& 1 & 1 & 1 & 1\\
+	1& 0&  0& 0& 1 & 0 & 0 & 1\\
+	1& 0&  1& 0& 1 & 0 & 1 & 1\\
+	1& 1&  0& 1& 0 & 0 & 0 & 1\\
+	1& 1&  1& 1& 1 & 1 & 1 & 1\\
+	\bottomrule
+\end{tabular}
+
+\hfill\\
+Since the proposition is always true, the proposition is a tautology. 
+
+\spart
+\begin{tabular}{c | c}
+	\toprule
+	$p$& 
+	$p\AND \NOT p$ \\
+	\midrule
+	\strut 
+	0&0\\
+	1&0\\
+	\bottomrule
+\end{tabular}
+
+\hfill\\
+Since the proposition is always false, the proposition is a contradiction.
+\spart
+\begin{tabular}{cc | ccc}
+	\toprule
+	$p$& $q$& 
+	$\overbrace{p\OR q}^\text{A}$ &
+	$\overbrace{p\AND q}^\text{B}$ &
+	$(A)\IMP (B)$\\
+	\midrule
+	\strut 
+	0& 0&  0& 0& 1\\
+	0& 1&  1& 0& 0\\
+	1& 0&  1& 0& 0\\
+	1& 1&  1& 1& 1\\
+	\bottomrule
+\end{tabular}
+
+\hfill\\
+Since the proposition is sometimes true and sometimes false, the proposition is a contingency. 
+\spart
+\begin{tabular}{c | c}
+	\toprule
+	$p$& 
+	$p\OR \NOT p$ \\
+	\midrule
+	\strut 
+	0&1\\
+	1&1\\
+	\bottomrule
+\end{tabular}
+
+\hfill\\
+Since the proposition is always true, the proposition is a tautology. 
+\spart
+\begin{tabular}{cc | ccc}
+	\toprule
+	$p$& $q$& 
+	$\overbrace{p\AND q}^\text{A}$ &
+	$\overbrace{p\OR q}^\text{B}$ &
+	$(A)\IMP (B)$\\
+	\midrule
+	\strut 
+	0& 0&  0& 0& 1\\
+	0& 1&  0& 1& 1\\
+	1& 0&  0& 1& 1\\
+	1& 1&  1& 1& 1\\
+	\bottomrule
+\end{tabular}
+
+\hfill\\
+Since the proposition is always true, the proposition is a tautology.
+
+\setcounter{solutioncounter}{2}
+\solution
+We will compare the truth tables of the subquestions to that of $p \IFF q$: 
+\begin{tabular}{cc | c}
+	\toprule
+	$p \IFF q$\\
+	\midrule
+	\strut
+	0& 0& 1\\
+	0& 1& 0\\
+	1& 0& 0\\
+	1& 1& 1\\
+	\bottomrule
+
+\end{tabular}
+\spart
+\begin{tabular}{cc | ccc}
+	\toprule
+	$p$& $q$&
+	$\overbrace{p \IMP q}^\text{A}$&
+	$\overbrace{q \IMP p}^\text{B}$&
+	$A \AND B$\\
+	\midrule
+	\strut
+	0& 0& 1& 1& 1\\
+	0& 1& 1& 0& 0\\
+	1& 0& 0& 1& 0\\
+	1& 1& 1& 1& 1\\
+	\bottomrule
+\end{tabular}
+
+\spart
+\begin{tabular}{cc | ccc}
+	\toprule
+	$p$& $q$&
+	$\overbrace{\NOT p}^\text{A}$&
+	$\overbrace{\NOT q}^\text{B}$&
+	$A \IFF B$\\
+	\midrule
+	\strut
+	0& 0& 1& 1& 1\\
+	0& 1& 1& 0& 0\\
+	1& 0& 0& 1& 0\\
+	1& 1& 0& 0& 1\\
+	\bottomrule
+\end{tabular}
+
+\spart
+\begin{tabular}{cc | ccccc}
+	\toprule
+	$p$& $q$&
+	$\overbrace{p \IMP q}^\text{A}$&
+	$\overbrace{\NOT p}^\text{B}$&
+	$\overbrace{\NOT q}^\text{C}$&
+	$\overbrace{B \IMP C}^\text{D}$&
+	$A \AND D$\\
+	\midrule
+	\strut
+	0& 0& 1& 1& 1& 1& 1\\
+	0& 1& 1& 1& 0& 0& 0\\
+	1& 0& 0& 0& 1& 1& 0\\
+	1& 1& 1& 0& 0& 1& 1\\
+	\bottomrule
+\end{tabular}
+
+\spart
+\begin{tabular}{cc | cc}
+	\toprule
+	$p$& $q$&
+	$\overbrace{p \XOR q}^\text{A}$&
+	$\NOT A$\\
+	\midrule
+	\strut
+	0& 0& 0& 1\\
+	0& 1& 1& 0\\
+	1& 0& 1& 0\\
+	1& 1& 0& 1\\
+	\bottomrule
+\end{tabular}
+
+\setcounter{solutioncounter}{3}
+\solution 
+\begin{tabular}{ccc | cccc}
+	\toprule
+	$p$& $q$& $r$ &
+	$\overbrace{p\IMP q}^\text{A}$ & 
+	$\overbrace{A \IMP r}^\text{B}$ &
+	$\overbrace{q \IMP r}^\text{C}$ &
+	$\overbrace{p \IMP C}^\text{D}$
+	\\
+	\midrule
+	\strut 
+	0& 0&  0& 1& 0 & 1 & 1\\
+	0& 0&  1& 1& 1 & 1 & 1\\
+	0& 1&  0& 1& 0 & 0 & 1\\
+	0& 1&  1& 1& 1 & 1 & 1\\
+	1& 0&  0& 0& 1 & 1 & 1\\
+	1& 0&  1& 0& 1 & 1 & 1\\
+	1& 1&  0& 1& 0 & 0 & 0\\
+	1& 1&  1& 1& 1 & 1 & 1\\
+	\bottomrule
+\end{tabular}
+
+\hfill\\
+Since the truth tables for the expressions (columns B and D) are different, they are not equivalent. As our counterexample take for instance: $p=q=r=0$. Thus $\IMP$ is not associative. \\
+What about $\IFF$?
+
+\setcounter{solutioncounter}{4}
+\solution
+\spart
+$p \OR q$ 
+\spart
+$\NOT p \IMP q$
+
+\setcounter{solutioncounter}{5}
+\solution
+The four propositions are:
+%\stparts{
+\begin{enumerate}
+	\item[\textbf{a)}] Galileo was not falsely accused and the Earth is the centre of the universe. %\cr
+	\item[\textbf{b)}] If the Earth moves then the Earth is not the centre of the universe. %\cr
+	\item[\textbf{c)}] The Earth moves if and only if the Earth is not the centre of the universe. %\cr
+	\item[\textbf{d)}] If the Earth moves the Galileo was falsely accused, but if the Earth is the centre of the universe then Galileo was not falsely accused.
+\end{enumerate}
+%}
+
+\setcounter{solutioncounter}{6}
+\solution
+\spart
+\begin{enumerate}
+	\item[\textbf{Converse}] If Sinterklaas brings you toys, you are good.
+	\item[\textbf{Contrapositive}] If Sinterklaas does not bring you toys, you are not good.
+\end{enumerate}
+\spart
+\begin{enumerate}
+	\item[\textbf{Converse}] If you need extra postage, then the package weighs more than one kilo.
+	\item[\textbf{Contrapositive}] If you do not need extra postage, then the package does not weigh more than one kilo.
+\end{enumerate}
+\spart
+\begin{enumerate}
+	\item[\textbf{Converse}] If I don't eat courgette, I have a choice.
+	\item[\textbf{Contrapositive}] If I eat courgette, I don't have a choice.
+\end{enumerate}
+
+\setcounter{solutioncounter}{7}
+\solution
+\spart
+The only card that satisfies this is the ten of hearts.
+\spart
+An ordinary deck has 4 cards that satisfy the condition of being a ten, and 13 cards that satisfy the condition of being a heart, the ten of hearts has been counted twice. So the total the amount of cards that satisfy all conditions is 16.
+\spart
+All cards that are not a ten will satisfy this condition, as well as the cards that are a ten and a heart, which is only the ten of hearts. So only three cards do not satisfy this condition, which are the ten of diamonds, ten of spades, and ten of clubs.
+\spart
+It's easier to reason about the cards that do not satisfy the condition. All cards that are a ten and not a heart do not satisfy the condition, as well as all cards that are a heart and not a ten. There are 3 cards that are a ten and not a heart (ten of diamonds, ten of spades, and ten of clubs). There are 12 cards that are a heart and not a ten. So the total amount of cards that do not satisfy this condition is 15, which means that there are 37 cards that satisfy the condition.
+
+\setcounter{solutioncounter}{8}
+\solution
+A $\ast$ is used to indicate the step at which we can stop rewriting, as the equation will use $\downarrow$ or other operators shown previously.
+\begin{enumerate}
+	\item \begin{align*}
+	\NOT p & \equiv (\NOT p \AND \NOT p)\\
+	& \equiv \NOT (p \OR p)\\
+	& \equiv p \downarrow p
+	\end{align*}
+	\item \begin{align*}
+	p \AND q & \equiv \NOT (\NOT p \OR \NOT q)\\
+	& \equiv \NOT p \downarrow \NOT q \tag{$\ast$}\\
+	& \equiv (p \downarrow p) \downarrow (q \downarrow q)
+	\end{align*}
+	\item \begin{align*}
+	p \OR q & \equiv \NOT \NOT (p \OR q)\\
+	& \equiv \NOT (p \downarrow q) \tag{$\ast$}\\
+	& \equiv (p \downarrow q) \downarrow (p \downarrow q)
+	\end{align*}
+	\item \begin{align*}
+	p \IMP q & \equiv \NOT p \OR q \tag{$\ast$}\\
+	& \equiv (\NOT p \downarrow q) \downarrow (\NOT p \downarrow q) \\
+	& \equiv ((p \downarrow p) \downarrow q) \downarrow ((p \downarrow p) \downarrow q)
+	\end{align*}
+	\item \begin{align*}
+	p \IFF q & \equiv (p \IMP q) \AND (q \IMP p) \tag{$\ast$}\\
+	& \equiv (((p \downarrow p) \downarrow q) \downarrow ((p \downarrow p) \downarrow q)) \AND (((q \downarrow q) \downarrow p) \downarrow ((q \downarrow q) \downarrow q)) \\
+	& \equiv (((((p \downarrow p) \downarrow q) \downarrow ((p \downarrow p) \downarrow q)) \downarrow (((p \downarrow p) \downarrow q) \downarrow ((p \downarrow p) \downarrow q))) \notag\\ 
+	& \quad \downarrow ((((q \downarrow q) \downarrow p) \downarrow ((q \downarrow q) \downarrow p)) \downarrow (((q \downarrow q) \downarrow p) \downarrow ((q \downarrow q) \downarrow p))))
+	\end{align*}
+	\item \begin{align*}
+	p \XOR q & \equiv (p \AND \NOT q) \OR (\NOT p \AND q) \tag{$\ast$}\\
+	& \equiv (p \AND (q \downarrow q)) \OR ((p \downarrow p) \AND q)\\
+	& \equiv ((p \downarrow p) \downarrow ((q \downarrow q) \downarrow (q \downarrow q))) \OR (((p \downarrow p) \downarrow (p \downarrow p)) \downarrow (q \downarrow q))\\
+	& \equiv ((((p \downarrow p) \downarrow ((q \downarrow q) \downarrow (q \downarrow q))) \downarrow (((p \downarrow p) \downarrow (p \downarrow p)) \downarrow (q \downarrow q))) \notag\\
+	& \quad \downarrow (((p \downarrow p) \downarrow ((q \downarrow q) \downarrow (q \downarrow q))) \downarrow (((p \downarrow p) \downarrow (p \downarrow p)) \downarrow (q \downarrow q))))
+	\end{align*}
+\end{enumerate}
+
+\setcounter{solutioncounter}{9}
+\solution
+\spart
+A truth table for a formula containing two unique atoms will have 4 rows. Each of these 4 rows could have either a $0$ or a $1$ as result. Which means that there will be $2^4$ unique truth tables for a formula containing 2 unique atoms.
+\spart
+\begin{tabular}{cc | cccccccc}
+	\toprule
+	$p$& $q$&
+	$p \AND \NOT p$&
+	$p \AND q$&
+	$p \AND \NOT q$&
+	$p$&
+	$\NOT p \AND q$&
+	$q$&
+	$\NOT(p \IFF q)$&
+	$p \OR q$
+	\\
+	\midrule
+	\strut 
+	0& 0&  0& 0& 0& 0& 0& 0& 0& 0\\
+	0& 1&  0& 0& 0& 0& 1& 1& 1& 1\\
+	1& 0&  0& 0& 1& 1& 0& 0& 1& 1\\
+	1& 1&  0& 1& 0& 1& 0& 1& 0& 1\\
+	\bottomrule
+\end{tabular}
+\\
+\begin{tabular}{cc | cccccccc}
+	\toprule
+	$p$& $q$&
+	$\NOT p \AND \NOT q$&
+	$p \IFF q$&
+	$\NOT q$&
+	$q \IMP p$&
+	$\NOT p$&
+	$p \IMP q$&
+	$\NOT p \OR \NOT q $&
+	$p \OR \NOT p$
+	\\
+	\midrule
+	\strut 
+	0& 0&  1& 1& 1& 1& 1& 1& 1& 1\\
+	0& 1&  0& 0& 0& 0& 1& 1& 1& 1\\
+	1& 0&  0& 0& 1& 1& 0& 0& 1& 1\\
+	1& 1&  0& 1& 0& 1& 0& 1& 0& 1\\
+	\bottomrule
+\end{tabular}
+\spart
+Given that we can create a formula for each of the possible truth table using these 5 operators. Furthermore, we know that there are only $2^{2^{n}}$ possible truth tables, where $n$ is the number of unique atoms. Given that every one of these truth tables has a corresponding formula using only the 5 operators, which we denote as $f_i$, where $1 \leq i \leq 2^{2^{n}} - 1$. Now take a formula, $f'$, that uses the same unique atoms, but not necessarily the same operators from the set of 5 operators stated in the description. The truth table for the formula $f'$ will be equal to one of the $2^{2^{n}}$ possible truth tables, which also means that there is a $f_i$ that is equivalent to $f'$, so we can rewrite $f'$
+
+
+\end{solutions}

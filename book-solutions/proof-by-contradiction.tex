@@ -1,0 +1,120 @@
+\section*{Solutions~3.3}%\ref{S-proof-by-contradiction}}
+
+\begin{solutions}
+	
+\setcounter{solutioncounter}{0}
+\solution
+\begin{proof}
+	Assume that all of the numbers $a_i$ are smaller than or equal to 10. Since the maximum value of each $a_i$ is 10, the maximum value of $a_1+a_2+...+a_{10}$ is now 100. However we asssumed that the summation was strictly larger than 100. This contradiction means our assumption that all numbers are smaller than or equal to 10 must have been false and so at least one $a_i$ must be greater than 10.
+\end{proof}
+	
+	
+\setcounter{solutioncounter}{1}
+\solution
+\begin{itemize}
+	\item \verb|a)|
+	\begin{proof}
+		Assume that there exists an integer that is odd whose square is even, i.e. $\exists n \in \mathbb{Z} ((2 \mid n^2) \land (2 \nmid n)) \equiv \exists n \in \mathbb{Z} ((2 \nmid n) \land (2 \mid n^2))$. Take an arbitrary odd integer $m = 2p - 1, p \in \mathbb{Z}$. By taking its square, we get
+		\begin{align*}
+			m^2 = (2k-1)^2
+			 = 4k^2 - 4k + 1
+			 = 2(2k^2 - 2k) + 1
+			 = 2a + 1, a \in \mathbb{Z}
+		\end{align*}
+		This means that the square is again odd. Because the integer we have taken was arbitrary, this is the case for all odd integers. From this follows a contradiction: in our assumptions, we stated that there must exist an integer that is odd whose square is even, which can never happen. For this reason, the assumption is false, and the original claim must be valid.
+	\end{proof}
+
+	\item \verb|b)|
+	\begin{proof}
+		Assume $\sqrt{2}$ to be rational. This means that $\sqrt{2}$ can be written as 
+		\begin{align*}
+			\sqrt{2} = \frac{a}{b}, a, b \in \mathbb{Z}
+		\end{align*}
+		where a and b do not have any common divisors (= the fraction cannot be simplified). Then:
+		\begin{align}
+			2 = \frac{a^2}{b^2}\\
+			2b^2 = a^2
+		\end{align}
+		This implies that $a^2$ is even. From \verb|a)|, we know that if $a^2$ is even, then a is also even.\\
+		A can now be written as $a = 2k, k \in \mathbb{Z}$.
+		\begin{align}
+			2b^2 = a^2 = (2k)^2 = 4k^2\\
+			2b^2 = 4k^2\\
+			b^2 = 2k^2
+		\end{align}
+		Consequently, $b^2$ is even so b is even. However, because $\frac{a}{b}$ was supposed to not have any common divisors and a and b are both even (must have 2 as a common divisor), we derived a contradiction. This disproves our assumption and as a consequence, $\sqrt{2}$ must be irrational.\\
+		
+		\emph{Note: in this case, doing the proof by contradiction and taking the inverse of the statement helped, because we switched from working with an irrational number to working with fractions of integers.}
+	\end{proof}
+
+	\item \verb|c)|
+	\begin{proof}
+		Assume that the sum of a rational and an irrational number is rational. Then:
+		\begin{align}
+			r = \frac{a}{b}, a, b \in \mathbb{Z}, b \ne 0\\
+			r + x = \frac{c}{d}, c, d \in \mathbb{Z}, d \ne 0
+		\end{align}
+		Where $x \in \mathbb{R} - \mathbb{Z}$ (i.e., is irrational).
+		These fractions cannot be simplified. Now:
+		\begin{align}
+			\frac{a}{b} + x &= \frac{c}{d}\\
+			x &= \frac{c}{d} - \frac{a}{b}\\
+			&= \frac{cb - ad}{db}, db \ne 0
+		\end{align}
+		The term $cd - ab$ is an integer, and so is $db$. This would mean that x is a fraction of 2 integers - in other words, x is rational. Because we assumed x to be irrational, this is a contradiction. We can therefore conclude that the sum of a rational and irrational number must be irrational.\\
+		
+		\emph{Note: in this case, doing the proof by contradiction and taking the inverse of the statement helped, because we switched from working with an irrational number to working with fractions of integers.}
+	\end{proof}
+
+	\item \verb|d)|
+	\begin{proof}
+		Assume that rx is rational. Then:
+		\begin{align}
+			r = \frac{a}{b}, a, b \in \mathbb{Z}, a, b \ne 0\\
+			rx = \frac{c}{d}, c, d \in \mathbb{Z}, c, d \ne 0
+		\end{align}
+		Where $x \in \mathbb{R} - \mathbb{Z}$ (i.e., is irrational).
+		These fractions cannot be simplified. Then:
+		\begin{align}
+			rx &= \frac{c}{d} = \frac{xa}{b}\\
+			cb &= xad\\
+			x &= \frac{cb}{ad}, a, b, c, d \ne 0
+		\end{align}
+		The term $cd$ is a nonzero integer, and so is $ad$. This would mean that x is a fraction of 2 integers - in other words, x is rational. Because we assumed x to be irrational, this is a contradiction. We can therefore conclude that the product of a rational and irrational number must be irrational.\\
+		
+		\emph{Note: in this case, doing the proof by contradiction and taking the inverse of the statement helped, because we switched from working with an irrational number to working with fractions of integers.}
+	\end{proof}
+
+	\item \verb|e)|
+	\begin{proof}
+		Assume that r and r + x are rational and x is irrational. Then:
+		\begin{align}
+			r = \frac{a}{b}, a, b \in \mathbb{Z}, a, b \ne 0\\
+			r + x = \frac{c}{d}, c, d \in \mathbb{Z}, c, d \ne 0
+		\end{align}
+		Where $x \in \mathbb{R} - \mathbb{Z}$ (i.e., is irrational).
+		Now, it is important to realise that x cannot be expressed as a rational number, i.e. $\neg\exists i, j$ such that $(x = \frac{i}{j})$. Now:
+		\begin{align}
+			\frac{a}{b} + x = \frac{c}{d}\\
+			x = \frac{c}{d} - \frac{a}{b}\\
+			x = \frac{cb - ad}{db}
+		\end{align}
+		The term $cb - ad$ is a nonzero integer, and so is $db$. This would mean that x is a fraction of 2 integers - in other words, x is rational. Because we assumed x to be irrational, this is a contradiction. We can therefore conclude that if r and r + x are both rational, then x is rational.\\
+		
+		\emph{Note: here, the proof by contradiction did not help as much. Going from rational to irrational does not bring any improvement, because we only know how \strong{not} to write an irrational number.}
+	\end{proof}
+	
+\end{itemize}
+	
+	
+\setcounter{solutioncounter}{2}
+\solution
+\begin{proof}
+	Assume that every hole has at most one pigeon in it.
+	This means that there are $< k$ pigeons in total. Since $n > k$ this forms a contradiction. Therefore our assumption
+	that every hole has at most one pigeon is incorrect and there must be at least one hole that has two or more pigeons.
+\end{proof}
+(Take care to flip the quantifiers correctly when doing a proof by contradiction! $\neg \forall x(\dots)$ becomes $\exists
+x(\neg \dots)$.)
+
+\end{solutions}
