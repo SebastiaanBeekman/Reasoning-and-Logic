@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.9)  13 SEP 2022 14:19
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.9)  13 SEP 2022 15:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -170,18 +170,54 @@ File: images/TU_delft_logo.jpg Graphic file (type bmp)
 <images/TU_delft_logo.jpg>
 [1
 
-] (main.toc)
+] (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (C:\Users\sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (C:\Users\sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [1] [2] [3] [4] [5] [6] (main.aux) ) 
-Here is how much of TeX's memory you used:
- 3104 strings out of 410536
- 50477 string characters out of 2813393
- 399023 words of memory out of 3000000
- 24263 multiletter control sequences out of 15000+600000
- 469355 words of font info for 40 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 55i,5n,62p,293b,211s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ [1] [2]
+File: images/tarski-world-example-1.png Graphic file (type bmp)
+<images/tarski-world-example-1.png>
 
-Output written on main.xdv (7 pages, 6432 bytes).
+Underfull \hbox (badness 10000) in paragraph at lines 68--80
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 81--88
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 99--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--113
+
+ []
+
+[5] [6] [7] [8] (main.aux) ) 
+Here is how much of TeX's memory you used:
+ 3149 strings out of 410536
+ 51297 string characters out of 2813393
+ 409031 words of memory out of 3000000
+ 24292 multiletter control sequences out of 15000+600000
+ 471062 words of font info for 49 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 55i,5n,62p,396b,211s stack positions out of 10000i,1000n,20000p,200000b,80000s
+
+Output written on main.xdv (9 pages, 62884 bytes).

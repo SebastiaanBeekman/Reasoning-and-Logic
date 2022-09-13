@@ -1,6 +1,16 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Question 1}{2}{}%
-\contentsline {section}{\numberline {2}Question 2}{3}{}%
-\contentsline {section}{\numberline {3}Question 3}{4}{}%
-\contentsline {section}{\numberline {4}Question 4}{5}{}%
-\contentsline {section}{\numberline {5}Question 5}{6}{}%
+\contentsline {section}{\numberline {2}Question 2 - Tarski's World}{3}{}%
+\contentsline {subsection}{\numberline {2.1}(a)}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}(I)}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}(II)}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}(III)}{4}{}%
+\contentsline {subsection}{\numberline {2.2}(b)}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}(I). }{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}(II). }{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}(III). }{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}(IV). }{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.5}(V). }{5}{}%
+\contentsline {section}{\numberline {3}Question 3}{6}{}%
+\contentsline {section}{\numberline {4}Question 4}{7}{}%
+\contentsline {section}{\numberline {5}Question 5}{8}{}%
