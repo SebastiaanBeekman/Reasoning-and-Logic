@@ -4,6 +4,7 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{logicproof}
 \usepackage{amssymb}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 
@@ -34,11 +35,116 @@
 \newpage
 \section{Question 1}
 
+For each of the following statements, indicate whether they are \textit{necessary} for $8 | n$ with \textit{n} an arbitrary integer. Give a convincing argument for your answer.
+\begin{itemize}
+    \item $ n > 3  $ \\
+    Yes this attribute is necessary, however as the given statement works with integers from which we assume that the answer should also be an integer.
+    With this in mind, any integer which is smaller than 8 (which also includes the limiter 3) will result in an outcome which is not an integer.
+    Knowing this, n should be greater or equal to 8,this will hold as the result of $8 \mid 8 = 1$ which results in a prime factor.
+    % No, as one of the prime factors for 8 which where n \s 3 is 2.
+    % This is on the basis that 8 is divisible by 2 as well as 2 being a prime number, this makes numbers n smaller than
+    \item $ 512 | n^3 $ \\
+    Yes this statement will hold however it is not necessary for the original statement, as the given statement can be simplified by taking the cube root of 512.
+    This equates to $8 \mid n $, which is equivelant to the original statement.
+    \item $ 7 \nmid n $ \\
+    No, this statement is not necessary, this does not add anything to the original statement.
+    Another argument for the missing necessity is that there are arbitrary \textit{n} values which are both devisable by 8 and 7 at the same time.
+    This is on the premise that any arbitrary integer is allowed to be chosen for \textit{n} .
+\end{itemize} 
+
+For each of the following statements, indicate whether they are \textit{sufficient} for $5 | n$.
+As a general simplification, the base statement can be rewritten as \textit{n = 5 * k} which states that any number divisable by 5 is any number which is a multiple of 5.
+
+\begin{itemize}
+    \item $ 5  \sqrt[2]{n} $ \\
+    The given statement is not valid. if we use the simplification given it is not possible to get a multiplication which results in the result of 
+    The only way to get the square root of 5 is to multiply 5 to the power 1/2, this will mathematically result in the same answer as square root of 5.
+    \item $ 3 \nmid n $ \\
+    To start, we can simplify the formula to n  3 * k where k is any arbitrary integer.
+    On this basis we can say that the statement is not sufficient as that there are integers which are a multiple of 5 / are devisable by 5 which are also a multiple of 3 / devisable by 3.
+    This makes the statement false thus not sufficient.
+    \item $ n = 25^k (k \ge 3) $ \\ 
+    The given statement is sufficient on the basis that $(25^k)$ is equivelant to $ ((5^2)^k) $ which is equivelant to $ (5^{2k}) $.
+    This means that the base integer is 5 and thus the product of the given statement is devisable by 5 thus making both statements true, making the given statement sufficient.
+    
+\end{itemize}
+
 \newpage
 \section{Question 2}
 
 \newpage
 \section{Question 3}
+For each of the following abstractly formulated claims, outline a proof for the claim. Highlight what proof techniques you would use in your proof. For example for : $ \forall x \ (P(x) \to Q(x))$, we would answer: Take an arbitrary x such that \textit(P(x)) holds. Now we show that \textit{R(x)} holds. Since x was arbitrarily chosen, it will hold for all x.\\
+
+\textbf{a} $ \exists x \ (P(X))$\\ 
+The given statement can be proven by existence.
+This can be done by finding a value of x which holds, for example: there is an even prime number.
+This can be formally written as:
+{
+    \noindent
+    \setlength\subproofhorizspace{2em}
+    \begin{logicproof}{1}
+        \exists x \ (P(X)) & premise \\
+        \exists x \ (P(X)) & premise \\\hspace*{-30pt}
+        \textbf{True} & \textbf{conclusion} 
+    \end{logicproof}
+}
+
+\textbf{b} $ \forall x \ (P(x) \iff Q(x))$\\
+The given statement can be proven by using both generalization and contrapositive.
+To start, the given statement can be simplified to $ \forall x \,((P(x) \to Q(x)) ^ (Q(x) \to P(x)))$.
+This allows for the ability to proof the first and second statement separately.
+we need to choose an arbitrary x for which \textit{P(x)} holds.
+{
+    \noindent
+    \setlength\subproofhorizspace{2em}
+    \begin{logicproof}{1}
+        \forall x \, (P(x) \to Q(x)) & premise \\
+        \forall x \, P(x) & premise \\\hspace*{-30pt}
+        \forall x \, Q(x) & \textbf{conclusion} 
+    \end{logicproof}
+}
+{
+    \noindent
+    \setlength\subproofhorizspace{2em}
+    \begin{logicproof}{1}
+        \forall x \, (Q(x) \to P(x)) & premise \\
+        \forall x \, P(x) & premise \\\hspace*{-30pt}
+        \forall x \, \neg Q(x) & \textbf{conclusion} 
+    \end{logicproof}
+}
+
+\textbf{c}  $\forall x \ (\neg P(x) \to \neg Q(x))$\\
+The given statement can be proven doing a proof by generalization.
+First, the given statement can be rewritten to $ \forall x \, P(x) \vee \neg Q(x))$.
+If we use an arbitrary value for x for which \textit{P(x)} holds, then the statement will hold as only one of the statements needs to be true for the proof to be valid.
+This can formally be written as
+{
+    \noindent
+    \setlength\subproofhorizspace{2em}
+    \begin{logicproof}{1}
+        \forall \forall x \, P(x) \vee \neg Q(x)) & premise \\
+        \forall x \, P(x) & premise \\\hspace*{-30pt}
+        \forall x \, \neg Q(x) & \textbf{conclusion} 
+    \end{logicproof}
+}
+
+\textbf{d} $ \forall x \ (P(X) \to \exists y \ (R(x,y)))$  \\
+The given statement can be proven by generalization and existence.
+The structure of the statement is such that x is allowed to be any arbitrary variable $(\forall x)$.
+Based on this we can mainly use a proof by existence by finding a y value for which $\exists y \,R(x, y)$ holds.
+And as x is allowed to be any arbitrary value, the statement will be true. 
+(This should also still be valid if the statement is rewritten to $\forall x \, \neg P(x) \vee \exists y \, (R(x,y))$ as when the second predicate is true and the first predicate is false due to the 'or' operator).
+The statement can formally be written as:
+{
+    \noindent
+    \setlength\subproofhorizspace{2em}
+    \begin{logicproof}{1}
+        \forall \forall x \, \neg P(x) \vee \exists y \, (R(x,y)) & premise \\
+        \forall y \, R(x,y) & premise \\\hspace*{-30pt}
+        \textbf{True} & \textbf{conclusion} 
+    \end{logicproof}
+}
 
 \newpage
 \section{Question 4}
