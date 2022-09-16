@@ -1,17 +1,28 @@
 # Fdb version 3
-["xdvipdfmx"] 1663076759 "main.xdv" "main.pdf" "main" 1663076759
-  "main.xdv" 1663076759 62884 f2ec4b2592ae838e7cb618db7b6904ae "xelatex"
+["xdvipdfmx"] 1663330578 "main.xdv" "main.pdf" "main" 1663330578
+  "main.xdv" 1663330577 99000 d7c3c030c1fee15472f608237d359877 "xelatex"
   (generated)
   "main.pdf"
-["xelatex"] 1663076758 "c:/Users/sebas/Projects/Reasoning-and-Logic/TA-checks/Week 2/Latex/main.tex" "main.xdv" "main" 1663076759
+["xelatex"] 1663330576 "c:/Users/sebas/Projects/Reasoning-and-Logic/TA-checks/Week 2/Latex/main.tex" "main.xdv" "main" 1663330578
   "C:/Users/sebas/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1662712595 23982160 b6e8390922a80340abe294a17cb1c874 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233955454 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233955454 928 2dc8d444221b7a635bb58038579b861a ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233955454 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233955454 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233955454 940 228d6584342e91276bf566bcf9716b83 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
+  "C:/Users/sebas/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty" 1661764544 151613 ca1138ead98be47bdb29e138c3880089 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/en/babel-en.ini" 1661764547 3966 caeee5a9e5771d4446aa1ca9015ba1b2 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/en/babel-english.tex" 1661764547 336 ed676b5e7dfd862bc78d634f6a973f37 ""
@@ -38,12 +49,12 @@
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1655058252 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1655058252 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/sebas/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-xetex.def" 1661885168 32199 a815d44dded90ab5ae3d627f418e69d7 ""
-  "c:/Users/sebas/Projects/Reasoning-and-Logic/TA-checks/Week 2/Latex/main.tex" 1663076757 6103 265d0536fece7022fbc27904d6186e45 ""
+  "c:/Users/sebas/Projects/Reasoning-and-Logic/TA-checks/Week 2/Latex/main.tex" 1663330576 11615 b06c74ab9d88e0eafd1f75d0ea79df07 ""
   "images/TU_delft_logo.jpg" 1662823369 223574 0e88875469a96842b9de20ff3fb2e2e9 ""
   "images/tarski-world-example-1.png" 1663074874 7899 90bd9a44f5f15d779287b46639e41735 ""
-  "main.aux" 1663076759 1799 20cd7796b5ec0d03206f850adc908cb1 "xelatex"
-  "main.tex" 1663076757 6103 265d0536fece7022fbc27904d6186e45 ""
-  "main.toc" 1663076759 939 d8af7496d6375911f966d9a1108e6704 "xelatex"
+  "main.aux" 1663330577 3096 52728a59041830ad5bff5dba4fdd4aff "xelatex"
+  "main.tex" 1663330576 11615 b06c74ab9d88e0eafd1f75d0ea79df07 ""
+  "main.toc" 1663330577 1990 e448e54be282307abf9032a61bfb94d6 "xelatex"
   (generated)
   "main.aux"
   "main.log"

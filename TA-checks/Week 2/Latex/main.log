@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.9)  13 SEP 2022 15:45
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.9)  16 SEP 2022 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,14 +210,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--113
 
  []
 
-[5] [6] [7] [8] (main.aux) ) 
-Here is how much of TeX's memory you used:
- 3149 strings out of 410536
- 51297 string characters out of 2813393
- 409031 words of memory out of 3000000
- 24292 multiletter control sequences out of 15000+600000
- 471062 words of font info for 49 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 55i,5n,62p,396b,211s stack positions out of 10000i,1000n,20000p,200000b,80000s
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
-Output written on main.xdv (9 pages, 62884 bytes).
+ []
+
+[8] (main.aux) ) 
+Here is how much of TeX's memory you used:
+ 3176 strings out of 410536
+ 51578 string characters out of 2813393
+ 415031 words of memory out of 3000000
+ 24310 multiletter control sequences out of 15000+600000
+ 475707 words of font info for 67 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 55i,6n,62p,421b,211s stack positions out of 10000i,1000n,20000p,200000b,80000s
+
+Output written on main.xdv (9 pages, 99000 bytes).

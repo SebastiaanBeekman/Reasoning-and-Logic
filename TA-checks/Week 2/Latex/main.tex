@@ -110,23 +110,98 @@ all objects that have Q also have R, then all all objects with P have R as well.
 the case, as is shown by the following structure C with domain D = \{4, 5\}. Let $P^c$ = \{4, 5\} and
 $Q^c$ = $R^c$ = \{4\}. Now the first premise holds (take x = 4), the second one holds as $Q^c$ = $R^c$, but
 the conclusion does not hold: take x = 5.\\
-\subsubsection{(I). }
+\subsubsection{(I). $\exists $x(P(x)) $\therefore $ $\forall $x(P(x))}
+Structure A with domain D = \{a,b\}\\
+Let $P^A$ = \{a\}\\
+The first premise holds, but the conclusion does not: take x = b.
+\subsubsection{(II). $\therefore $ $\forall $xQ(x)}
+Structure B with domain D = \{a\}\\
+The (non-existent) premises hold, but the conclusion does not because it is not a tautology.
 
-\subsubsection{(II). }
+\subsubsection{(III). $\forall $x(P(x,x)) $\therefore $ $\forall $x$\forall $y(P(x,y))}
+Structure C with domain D = \{a,b\}\\
+Let $P^C$ = \{(a, a),(b, b)\}\\
+The first premise holds, but the conclusion does not: take x = a \& y = b.
+\subsubsection{(IV). $\neg $$\forall $x(P(x) $\wedge $ $\exists $y($\neg $Q(x,y))), $\forall $x($\neg $P(x) $\rightarrow $ $\exists $y(Q(x,y))) $\therefore $ $\forall $x$\exists $y(Q(x,y))}
+Structure D with domain D = \{a,b\}\\
+For the first premise, let $P^D$ = \{b\} and $Q^D$ = \{(a,a),(a,b)\}.\\
+For the second premise, let $P^D$ = \{b\} and $Q^D$ = \{(a, a)\}.\\
+The premises hold, but the conclusion does not: (a, a), (b, ?)
 
-\subsubsection{(III). }
-
-\subsubsection{(IV). }
-
-\subsubsection{(V). }
+\subsubsection{(V). $\neg $$\forall $x(P(x) $\rightarrow $ $\exists $yQ(x,y)), $\forall $x$\forall $y(R(x,y) $\rightarrow $ (P(y) $\vee $ Q(x,y))) $\therefore $ $\exists $z($\neg $P(z) $\vee $ $\forall $y(Q(z,y) $\wedge $ $\neg $R(y,z)))}
+Structure E with domain D = \{a,b,c\}\\
+For the first premise, let $P^E$ = \{a,b,c\} and $Q^E$ = \{\}.\\
+For the second premise, let $R^E$ = \{(a,a),(a,b),(a,c)\} $P^E$ = \{a,b,c\}, $Q^E$ = \{(a,a),(b,a),(c,a)\}.\\
+The premises hold, but the conclusion does not: take z = a \& y = b.
 
 \newpage
 \section{Question 3}
 
 \newpage
 \section{Question 4}
+In the previous homework assignment we saw the disjunctive normal form that every formula can be
+rewritten to. Every formula from propositional calculus can also be written as a conjunction of disjunctions,
+in conjunctive normal form (CNF). So the formula (p $\vee $ q) is already in conjunctive normal form as the
+conjunction of one disjunction, but ((p $\wedge $ q) $\vee $ r) is not in CNF because it is not a conjunction of
+disjunctions; rewriting it to ((p $\vee $ r) $\wedge $ (q $\vee $ r)) gives a conjunctive normal form of this formula.
+Now rewrite each of the following formulas to an equivalent form in conjunctive normal form. You need
+to be able to justify every step you take, so write down every step explicitly. Also make truth tables for
+the formulas labeled with '*' to show that the formula in CNF that you have found is equivalent to the
+formula in the assignment that you started with.
+\subsection{(a). ((a $\wedge $ b) $\rightarrow $ c)*}
+($\neg $(a $\wedge $ b) $\vee $ c)\\
+($\neg $a $\vee $ $\neg $b $\vee $ c)
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|}
+        a & b & c & ((a \wedge b) \rightarrow c) & (\neg a \vee \neg b \vee c) \\
+        \hline
+        0 & 0 & 0 & 1                            & 1                           \\
+        0 & 0 & 1 & 1                            & 1                           \\
+        0 & 1 & 0 & 0                            & 0                           \\
+        0 & 1 & 1 & 1                            & 1                           \\
+        \hline
+        1 & 0 & 0 & 1                            & 1                           \\
+        1 & 0 & 1 & 1                            & 1                           \\
+        1 & 1 & 0 & 1                            & 1                           \\
+        1 & 1 & 1 & 1                            & 1                           \\
+    \end{array}
+\end{displaymath}
+\subsection{(b). $\neg $(a $\rightarrow $ (b $\wedge $ c))*}
+$\neg $($\neg $a $\vee $ (b $\wedge $ c))\\
+a $\wedge $ $\neg $(b $\wedge $ c)\\
+a $\wedge $ ($\neg $b $\vee $ $\neg $c)
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|}
+        a & b & c & \neg (a \rightarrow (b \wedge c)) & a \wedge (\neg b \vee \neg c) \\
+        \hline
+        0 & 0 & 0 & 0                            & 0                           \\
+        0 & 0 & 1 & 0                            & 0                           \\
+        0 & 1 & 0 & 0                            & 0                           \\
+        0 & 1 & 1 & 0                            & 0                           \\
+        \hline
+        1 & 0 & 0 & 1                            & 1                           \\
+        1 & 0 & 1 & 1                            & 1                           \\
+        1 & 1 & 0 & 1                            & 1                           \\
+        1 & 1 & 1 & 0                            & 0                           \\
+    \end{array}
+\end{displaymath}
+\subsection{(c). ((a $\vee $ b) $\rightarrow $ (c $\vee $ d))}
+($\neg $(a $\vee $ b) $\vee $ (c $\vee $ d))\\
+($\neg $a $\wedge $ $\neg $b) $\vee $ (c $\vee $ d)\\
+($\neg $a $\vee $ c $\vee $ d) $\wedge $ ($\neg $b $\vee $ c $\vee $ d)
+\subsection{(d). $\neg $(p $\rightarrow $ $\neg $(q $\vee $ ($\neg $r $\wedge $ s))}
+$\neg $($\neg $p $\vee $ $\neg $(q $\vee $ ($\neg $r $\wedge $ s)))\\
+p $\wedge $ (q $\vee $ ($\neg $r $\wedge $ s))\\
+p $\wedge $ (q $\vee $ $\neg $r) $\wedge $ (q $\vee $ $\neg $s)
 
 \newpage
 \section{Question 5}
+\subsection{(a)}
+\textbf{In your own words, explain the difference between a function and a predicate}\\
+This depends on the definition of a function.
+When a function is an algorithm, then a function is a formal definition, which uses predicates, of said algorithm.
+On the other hand, a function can be a way to express how a predicate interacts with a structure's domain. For example, a domain of discourse is a set, A, and a predicate is a function from A.
+\subsection{(b)}
+\textbf{Give an example of a vacuously true statement about the real-world}\\
 
 \end{document}
