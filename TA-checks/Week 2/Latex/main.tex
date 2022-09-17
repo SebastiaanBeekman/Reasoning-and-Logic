@@ -35,8 +35,9 @@
 \newpage
 \section{Question 1}
 
+\subsection*{(a)}
 For each of the following statements, indicate whether they are \textit{necessary} for $8 | n$ with \textit{n} an arbitrary integer. Give a convincing argument for your answer.
-\begin{itemize}
+\begin{enumerate}
     \item $ n > 3  $ \\
     Yes this attribute is necessary, however as the given statement works with integers from which we assume that the answer should also be an integer.
     With this in mind, any integer which is smaller than 8 (which also includes the limiter 3) will result in an outcome which is not an integer.
@@ -50,12 +51,12 @@ For each of the following statements, indicate whether they are \textit{necessar
     No, this statement is not necessary, this does not add anything to the original statement.
     Another argument for the missing necessity is that there are arbitrary \textit{n} values which are both devisable by 8 and 7 at the same time.
     This is on the premise that any arbitrary integer is allowed to be chosen for \textit{n} .
-\end{itemize} 
-
+\end{enumerate} 
+\subsection*{(b)}
 For each of the following statements, indicate whether they are \textit{sufficient} for $5 | n$.
 As a general simplification, the base statement can be rewritten as \textit{n = 5 * k} which states that any number divisable by 5 is any number which is a multiple of 5.
 
-\begin{itemize}
+\begin{enumerate}
     \item $ 5  \sqrt[2]{n} $ \\
     The given statement is not valid. if we use the simplification given it is not possible to get a multiplication which results in the result of 
     The only way to get the square root of 5 is to multiply 5 to the power 1/2, this will mathematically result in the same answer as square root of 5.
@@ -67,9 +68,9 @@ As a general simplification, the base statement can be rewritten as \textit{n = 
     The given statement is sufficient on the basis that $(25^k)$ is equivelant to $ ((5^2)^k) $ which is equivelant to $ (5^{2k}) $.
     This means that the base integer is 5 and thus the product of the given statement is devisable by 5 thus making both statements true, making the given statement sufficient.
     
-\end{itemize}
+\end{enumerate}
 
-<<<<<<< HEAD
+
 \newpage
 \section{Question 2 - Tarski's World}
 \subsection{(a)}
@@ -130,8 +131,6 @@ Arguments:
 \subsubsection{(III)}
 A counter example is a Tarski World with a single entity. An entity can never be left or right of itself, so in the claim $\forall $x$\forall $y(RightOf(x,y) $\leftrightarrow $ LeftOf(x,y)) one side is always false and the other is always true (due to the not). This means that the claim is false.
 
-=======
->>>>>>> 8efc47d314599baa47b2e24a17998231cdcba535
 \newpage
 \subsection{(b)}
 For the following invalid arguments, give suitable counterexamples. A counterexample is a structure
@@ -312,5 +311,41 @@ When a function is an algorithm, then a function is a formal definition, which u
 On the other hand, a function can be a way to express how a predicate interacts with a structure's domain. For example, a domain of discourse is a set, A, and a predicate is a function from A.
 \subsection{(b)}
 \textbf{Give an example of a vacuously true statement about the real-world}\\
+Predicate definition:\\
+\textbf{a.} A(x) = "x is a TU Delft student" \\
+\textbf{b.} B(x) = "x has seen the dinosaurs die out" \\
+\textbf{c.} C(x) = "x owns a house" \\
+$$ \forall x \, ((A(x) \land B(x)) \to C(x))$$
+The given statement reads: \textit{"Every TU Delft student who has seen the dinosaurs die out, also owns a house"}.
+The statement is obviously vacuously true as no TU delft student has seen the dinosaurs die out and because of that statement is tall.
+\subsection{(c)}
+\textbf{Old exam question:} if the following claim is true, explain why it is true or if it is false, give a counterexample.
+Start your answer with either the word "True" or "False" indicating which of the two options applies.\\
+We can translate the statement $p \land \neg p$ for some atomic proposition to $\forall x \, \in D(P(x) \land \neg P(x))$ for some predicate \textit{P} and some domain \textit{D}.
+Now both statements are contradictions.
+\\ \\
+True, both statements are contradictions.
+To start, the first propositional statement is a contradiction as when \textit{p} is True $ \neg p$ will be false, and because both atoms need to be True due to the $\land$ operator for the statement to be True;
+The first statement is a contradiction.
+When taking a look at the second statement, the same largely applies.
+To start x is allowed to be any arbitrary value for which \textit{P(x)} holds, if \textit{P(x)} holds $\neg P(x)$ will not hold.
+As both predicates need to be true for the domain to be true, and with one of the predicates always being false;
+This statement is also a contradiction, therefore both statements are contradictions.
 
+\subsection{(d) \textbf{Reflection:}}
+\begin{itemize}
+    \item How did you use the feedback from the teaching assistant on the previous assignment in the weeks' helpful homework?
+    \begin{itemize}
+        \item The feedback which we got from the TA in the past week was minor and it cleared up some misconceptions about certain topics. We mainly used the feedback to iron out some small/silly mistakes in this weeks' homework.
+    \end{itemize}
+    \item What questions do you have for a teaching assistant when you go to discuss your work with them?
+    \begin{itemize}
+        \item One of the main questions that we have is, are there any techniques to perform proof a bitt faster, as we were kind of fumbling with them (not because of lack of knowledge but rather choosing an optimal approach) 
+    \end{itemize}
+    \item What was the hardest question for you to answer and what will you do to improve your skills in answering that type of question on an exam?
+    \begin{itemize}
+        \item The hardest question likely was 2 (tarski's world) due to the size of it which could cause errors to be introduced.
+        \item Also, question 3 was not particularly hard, except that we we fumbling with choosing a good approach.
+    \end{itemize}
+\end{itemize}
 \end{document}
