@@ -1,0 +1,2 @@
+# Definition 2.8
+Suppose that P is a one-place predicate. Then ∀x(P(x)) is a proposition, which is true if and only if P(a) is true for every entity a in the domain of discourse for P. And ∃x(P(x)) is a proposition which is true if and only if there is at least one entity, a, in the domain of discourse for P for which P(a) is true. The ∀ symbol is called the universal quantifier, and ∃ is called the existential quantifier.

@@ -1,0 +1,2 @@
+# Theorem 2.3
+Consider a table that lists a logical output value for every combination of values of several propositional variables. Assume that at least one of the output values is true. Then there is a proposition containing those variables such that the value of the proposition for each possible combination of the values of thevariables is precisely the value specified in the table. It is possible to choose the proposition to be in disjunctive normal form.

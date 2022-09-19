@@ -1,0 +1,2 @@
+# Definition 2.6
+A compound proposition is said to be in **disjunctive normal form**, or **DNF**, if it is a disjunction of conjunctions of simple terms, and if, furthermore, each propositional variable occurs at most once in each conjunction and each conjunction occurs at most once in the disjunction.

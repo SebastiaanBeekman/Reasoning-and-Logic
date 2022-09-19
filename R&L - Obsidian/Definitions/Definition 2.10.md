@@ -1,0 +1,2 @@
+# Definition 2.10
+Let *P* and *Q* be any formulas in either propositional logic or predicate logic. The notation *P* $\Rightarrow$ *Q* is used to mean that *P* $\rightarrow$ *Q* is a tautology. That is, in all cases where *P* is true, *Q* is also true. We then say that *Q* can be logically deduced from *P* or that *P* logically implies *Q*.

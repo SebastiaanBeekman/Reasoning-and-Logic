@@ -1,0 +1,2 @@
+# Theorem 2.2 (Second Substitution Law)
+Suppose that P and Q are any propositions such that P $\equiv$ Q. Suppose that R is any compound proposition in which (P) occurs as a sub-proposition. Let R′ be the proposition that is obtained by substituting (Q) for that occurrence of (P) in R. Then R $\equiv$ R′.

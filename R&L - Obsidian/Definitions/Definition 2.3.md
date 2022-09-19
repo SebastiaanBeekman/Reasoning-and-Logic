@@ -1,0 +1,2 @@
+# Definition 2.3
+A set of logical operators is [[functionally complete]] if and only if all formulas in propositional logic can be rewritten to an equivalent form that uses only operators from the set.

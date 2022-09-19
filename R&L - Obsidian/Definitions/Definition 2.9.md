@@ -1,0 +1,2 @@
+# Definition 2.9
+Let *P* be a formula of predicate logic which contains one or more predicate variables. *P* is said to be a [[tautology]] if it is true whenever all the predicate variables that it contains are replaced by actual predicates. Two formulas *P* and *Q* are said to be [[logically equivalent]] if *P* $\leftrightarrow$ *Q* is a tautology, that is if *P* and *Q* always have the same truth value when the predicate variables they contain are replaced by actual predicates. The notation *P* $\equiv$ *Q* asserts that *P* is logically equivalent to *Q*.
