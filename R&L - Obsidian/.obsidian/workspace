@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cbadebd4ed858ad9",
+        "id": "05066b899a4c08a0",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "3. Proof/3. Proof by Contradiction/Proof by Contradiction.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "3. Proof/3. Proof by Contradiction/Proof by Contradiction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "3. Proof/3. Proof by Contradiction/Proof by Contradiction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "3. Proof/3. Proof by Contradiction/Proof by Contradiction.md"
+              }
             }
           }
         ]
@@ -120,6 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cbadebd4ed858ad9",
-  "lastOpenFiles": []
+  "active": "05066b899a4c08a0",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "3. Proof/3. Proof by Contradiction/Proof by Contradiction.md",
+    "Definitions/lemma.md",
+    "3. Proof/2. Mathematical Proof/2. Some terminology.md",
+    "Theorems/Theorem 3.2.md",
+    "Theorems/Theorem 3.3.md",
+    "3. Proof/Proof.md",
+    "Theorems/Theorem 3.1.md",
+    "3. Proof/2. Mathematical Proof/3. Examples.md",
+    "Overview.md"
+  ]
 }
