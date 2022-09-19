@@ -1,0 +1,2 @@
+# Logically equivalent
+Logical equivalence is two [[compound proposition|compound propositions]] always have the same value, no matter what truth values are assigned to the [[propositional variable|propositional variables]] that they contain.
