@@ -1,0 +1,3 @@
+# Commutative law
+- p ∧ q ≡ q ∧ p 
+- p ∨ q ≡ q ∨ p

@@ -1,0 +1,2 @@
+# Conjunctive Normal Form
+A compound proposition is said to be in **conjunctive normal form**, or **CNF**, if it is a conjunction of disjunction of simple terms, and if, furthermore, each propositional variable occurs at most once in each disjunction and each disjunction occurs at most once in the conjunction.

@@ -1,0 +1,4 @@
+# Tarski's world
+Tarski's worlds are visual representations of first-order logic. It is possible to describe situations using formulas whose truth can be evaluated, which are expressed in a first-order language that uses predicates such as Rightof(x, y), which means that *x* is situated, somewhere, not necessarily directly, to the right of *y*, or Blue(x), which means that *x* is blue. In the world in the figure below, for instance, the formula $\forall$x(Triangle(x) $\rightarrow$ Blue(x)) holds, since all triangles are blue, but the converse of this formula, $\forall$x(Blue(x) $\rightarrow$ Triangle(x)), does not hold, since object c is blue but not a triangle.
+
+![[Pasted image 20220918204810.png]]

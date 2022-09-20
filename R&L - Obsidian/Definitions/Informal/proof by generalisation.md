@@ -1,0 +1,3 @@
+# Proof by generalisation
+The most common pattern arises in the attempt to prove that something is true ‘for all’ or ‘for every’ or ‘for any’ entity in a given category. In terms of logic, the statement you are trying to prove is of the form $\forall$xP(x). In this case, the most likely way to begin the proof is by saying something like, “Let x be an arbitrary entity in the domain of discourse. We want to show
+that P(x).". This is a **proof by generalisation**.

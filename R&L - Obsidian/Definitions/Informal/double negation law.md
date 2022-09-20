@@ -1,0 +1,2 @@
+# Double negation
+¬(¬p) ≡ p

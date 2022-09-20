@@ -1,0 +1,2 @@
+# Contradiction
+p ∧ ¬p ≡ F
