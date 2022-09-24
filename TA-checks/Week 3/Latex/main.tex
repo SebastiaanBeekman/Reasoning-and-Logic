@@ -19,7 +19,7 @@
     \textsc{\Large Reasoning \& Logic}\\[0.2cm]
     \textsc{\large CSE1300}\\[1cm]
     \HRule \\[0.8cm]
-    { \huge \bfseries Assignment: TA-check 2}\\[0.7cm]
+    { \huge \bfseries Assignment: TA-check 3}\\[0.7cm]
     \HRule \\[2cm]
     \large
     \emph{Authors:}\\
@@ -34,5 +34,87 @@
 
 \newpage
 \section{Question 1}
+For each of the following claims, give a proof or provide a counterexample with an explanation of how it makes the claim false. \\
+\subsection{(a)} 
+\textbf{Claim.} \textit{For all integers a, b and c such that $a | b$ and $b | c$, we have $a | c$} \\
+To start, the given statement is partially false as the statement is true for specific cases/integers however not for all cases/integers.
+As an example as we can assign any arbitrary integer to the given variables we can assign the following values: $a = 1, b = 2, c = 3$.
+Once we fill in the given variables we see that $1 | 2 $ and $ 1 | 3$, however that $2 | 3$ (with the assumptions that the result must be an integer as the statement only applies to integers).
+On this basis we can see that one part of the LHS is true as well as the RHS being true, however due to the AND operator the result of the LHS is not true therefore the result should not be true. 
+\subsection{(b)} 
+\textbf{Claim.} \textit{For all integers a, b and c: if $(a + b) | c$ and $(a + c)|b$, then $(b + c) | a $.}\\
+The given statement is false on the basis that there is no combination of integers for which all three cases are true.
+First, if we choose an $a$, $b$ and $c$ for which the sum of a and b divides c than the sum of a and c will not divide b, also the third statement will be false as the sum of b and c will not divide a.\\
+Second, if we choose a set of values for which the sum of a and c divide b, the sum of a and b will not divide c as well as the sum of b and c will not divide a.\\
+Lastly, if we choose a set of values for which the sum of b and c divide a, the sum of a and b will not divide c as well as the sum of a and c will not divide b.\\
+\\
+An example with real numbers would be if we assign the following values to the variables: $a = 2, b = 4, c = 6$.
+With the given variables, the first case holds (as the sum of 2 and 4 divides 6), however the other two cases are false based on the rules outlined above.
+On this basis we say that the given statement is invalid.
+\subsection{(c)} 
+\textbf{Claim.} \textit{For all integers a, b and c: if $a|b$ and $a \nmid c$, then $a \nmid (c-b)$} \\
+The given claim is valid.
+First, for $a | b$ to be valid, $b$ must be of the form $ab$ (a multiple of $a$), with $c$ not being a multiple of $a$ for $a \nmid c$ to be true.
+This results in the following conlcusion for the claim: $a \nmid (c - ab)$, this is true as $c$ does not share a common factor with $a$ (not a multiple of $a$), thus making the claim true.
+
+\subsection{(d)} 
+\textbf{Claim.} \textit{There does not exist an integer $n$ such that $n^3 = 4k + 2$ for some integer $k$} \\
+The claim is valid, which we can prove by using a proof by contradiction.
+First, for the sake of argument we assume that there exists an arbitrary integer of $n$ for some integer $k$ that $n^3 = 4k + 2$.
+\subsection{(e)} 
+\textbf{Claim.} \textit{For all integers a, b, c, d: if $a|b$ and $c|d$, then $ac | bd$.} \\
+The given claim is true.
+First, for the first part of the claim to true, $b$ must be a multiple of $a$, or of the structure $kb$ ($k = a$).
+For the second part of the claim to be true, $d$ must be a multiple of $c$, or of the structure $md$ ($m = c$).
+This results in the third part of the claim looking as follows: $km | kbmd$, this is valid as $kbmd$ is a multiple of $km$ therefore the given claim is true.
+\subsection{(f)} 
+\textbf{Claim.} \textit{For all integers n: $4 \nmid (n^2 - 3)$.} \\
+We can proof this using a proof by contradiction.
+For the sake of argument we assume that there exists an arbitrary integer $n$ for which the claim holds, this means that $n$ should be of the form $4k$ (for any arbitrary integer $k$).
+We can choose any arbitrary integer k, if we fill this in we get $((4k)^2 - 3) = (16k^2 - 3)$.
+The result does not carry the given form (as 4 and 3 have no common factor), therefore we must assume that one of the assumptions was wrong.
+In this instance we can say that the assumption about that there exists an integer $n$ for which the claim hold is not true, and that therefore the claim is valid.
+\subsection{(g)} 
+\textbf{Claim.} \textit{For all integers $n > 0$: $\sum_{i=1}^{n} i!$ is odd.}\\
+First, the given claim can be rewritten to $\sum_{i=1}^{n} (\prod_{k=1}^{i}k)$ (i factorial).
+There are two different lemmas we will use to proof the given claim.
+These two lemmas involving the parity of numbers when they are added up (sum) and multiplied (product).
+The first lemma (addition) states the following of the addition of even and odd numbers:
+\begin{itemize}
+    \item even $\pm$ even = even ($2k \pm 2k = 4k = 2(2k)$)
+    \item even $\pm$ odd = odd ($2k \pm (2k+1) = 4k + 1 = 2(2k) + 1$)
+    \item odd $\pm$ odd = even ($(2k + 1) \pm (2k + 1) = (4k + 2) = 2(2k+1)$)
+\end{itemize}
+The second lemma (multiplication) states the following of the multiplication of even and odd numbers:
+\begin{itemize}
+    \item even $\ast$ even = even ($2k \ast 2k = 4k^2 = 2(2k)^2$)
+    \item even $\ast$ odd = even ($2k \ast (2k + 1 ) = 4k^2 + 2 = 2k(2k+1) $)
+    \item odd $\ast$ odd = odd ($(2k+1) \ast (2k+1) = 4k^2 + 4k + 1 = 4k(k) + 1$)
+\end{itemize}
+We can use these to say that the product of any given integer will be even (on the basis that the product of any integer $n > 1$ will result in an even product), with the excpetion of 1 (we come back to this later).
+As the sum starts at one (as the product of $n = 1$ is 1) with all of the other values being even (based on the given lemmas) we can conclude that the sum of any given integer will be odd as even + even + even + odd (1) will always be odd.
+On this basis we can say that the given claim is valid.
+\subsection{(h)} 
+\textbf{Claim.} \textit{For all real numbers $x$ and $y$ with $x \neq 0$ and $y \neq 0$, it holds that $\sqrt{x^2 + y^2} \neq x + y$} \\
+The given claim is false, we can show this by showing counterexample and utilizing the precedence rule.
+For the sake of argument we will say that there exist arbitrary $x$ and $y$ values for which $\sqrt{x^2 + y^2} = x + y$ (with $x \neq 0$ and $y \neq 0$).
+We can choose any arbitrary value for x and y as long as $x \neq 0$ and $y \neq 0$, on this basis we will use $k$ and $l$ for $x$ and $y$ respectively.
+This gives the formula $\sqrt{k^2 + l^2} = k + l$, which can be rewritten to $(k^2 + l^2)^{1/2} = l + m$.
+Using the precedence rule, the formula can be rewritten to $k^{2 * 1/2} + k^{2 * 1/2} = k +l$ (a higher precedence for the powers and roots), which can be rewritten to $(k^1 + l^1 = k + l) = (k + l = k + l)$.
+This shows that the given claim as $\sqrt{x^2 + y^2} = x + y$ is true. 
+If there were parentheses present, than the claim would be true.
+\subsection{(i)} 
+\textbf{Claim.} \textit{Prove the following claim for all integers $a,b,c$: if $a^2 + b^2 = c^2$, then $a$ or $b$ is even.}\\
+The claim is true, which can be proven using a proof by contradiction.
+If we assume that there are integers for \textit{a, b, c}, such that $a^2 + b^2 = c^2$, and $a$ and $b$ are odd.
+This means that we can write $a = 2k + 1$ and $b = 2m + 1$ for integer $a^2 + b^2 = (2k+1)^2 + (2m+1)^1 = 4k^2 + 4m^2 + 4k + 4m + 2$.
+Which can be rewritten to $4d + 2$, were $d = k^2 + m^2 + k + m$.
+So $c^2$ is not divisible by 4.
+$c^2 = 4d + 2 = 2(d - 1) = 2e $ for $e = d + 1$, so $c$ is even.
+Therefore $c = 2n$ for some integer $n$, so $c^2 = 4n^2$ is divisible by 4.
+This shows that there is a contradiction as the claim holds, therefore the original claim must be true and it hold for all integers \textit{a, b, c}, that means that if $a^2 + b^2 = c^2$ then $a$ or $b$ is even.
+
+
+
 
 \end{document}
