@@ -36,6 +36,7 @@ Writing a proof is even more difficult than reading a proof. Every proof involve
 however, some general guidelines for discovering and writing proofs. Let’s look at some of these next.
 
 ## Index
-- [[1. How to write a proof]]
-- [[2. Some terminology]]
-- [[3. Examples]]
+- [[How to write a proof]]
+- [[Some terminology]]
+- [[Examples]]
+- [[Mathematical Induction]]

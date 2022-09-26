@@ -1,0 +1,2 @@
+# Theorem 3.4
+Let P be a one-place predicate whose [[domain of discourse]] includes the [[natural numbers]]. Suppose that P(0) $\wedge$ ($\forall$k $\in$ N(P(k) $\rightarrow$ P(k +1))). Then P(n) is true for all natural numbers n. (That is, the statement $\forall$n P(n) is true, where the domain of discourse for P is the set of natural numbers.)

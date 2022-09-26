@@ -1,0 +1,10 @@
+# Mathematical Induction
+The structure of the [[natural numbers]] makes possible a powerful proof technique known as induction or mathematical induction. Let *P* be a one-place predicate whose [[domain of discourse]] includes the [[natural numbers]]. Suppose that we can prove that *P(0)* is true. Suppose that we can also prove the statements *P(0)* $\rightarrow$ *P(1)*, *P(1)* $\rightarrow$ *P(2)*, *P(2)* $\rightarrow$ *P(3)*, and so on. The principle of mathematical induction is the observation that we can then conclude that *P(n)* is true for all natural numbers *n*. This should be clear. It’s like a line of dominos, lined up and ready to fall, one after the next. Since *P(0)* and *P(0)* $\rightarrow$ *P(1)* are true, we can apply the rule of [[modus ponens]] to conclude that *P(1)* is true. Then, since *P(1)* and *P(1)* $\rightarrow$ *P(2)* are true, we can conclude by modus ponens that *P(2)* is true. From *P(2)* and *P(2)* $\rightarrow$ *P(3)*, we conclude that *P(3)* is true. For any given n in the set N, we can continue this chain of deduction for n steps to prove that *P(n)* is true.
+
+When applying induction, we don’t actually prove each of the implications *P(0)* $\rightarrow$ *P(1)*, *P(1)* $\rightarrow$ *P(2)*, and so on, individually. That would require an infinite amount of work. The whole point of induction is to avoid any infinitely long process. Instead, we prove $\forall$k *P(k)* $\rightarrow$ *P(k + 1)*). The statement $\forall$k *P(k)* $\rightarrow$ *P(k + 1)*) summarizes all the infinitely many implications in a single statement. Stated formally, the principle of mathematical induction says that if we can prove the statement *P(0)* ∧($\forall$k *P(k)* $\rightarrow$ *P(k + 1)*), then
+we can deduce that $\forall$n P(n) (again, with N as the domain of discourse).
+
+## Index
+- [[1. How to write a proof by induction]]
+- [[2. Examples]]
+- [[3. More examples]]

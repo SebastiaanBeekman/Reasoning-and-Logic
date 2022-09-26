@@ -5,3 +5,7 @@ In this chapter, we’ll look at some approaches and techniques that can be used
 - [[Historical Background]]
 - [[Mathematical Proof]]
 - [[Proof by Contradiction]]
+- [[Mathematical Induction]]
+- [[Strong Mathematical Induction]]
+- [[Application - Recursion and Induction]]
+- [[Recursive Definitions]]

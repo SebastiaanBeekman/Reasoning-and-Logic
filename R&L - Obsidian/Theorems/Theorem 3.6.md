@@ -1,0 +1,2 @@
+# Theorem 3.6
+Suppose that a compound proposition contains exactly n propositional variables, where n $\geq$ 1. Then there are exactly $2^n$ different ways of assigning truth values to the n variables.
