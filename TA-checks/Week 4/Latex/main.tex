@@ -35,4 +35,106 @@
 \newpage
 \section{Question 1}
 
+\section{Question 4: Repetition}
+\begin{enumerate}
+    \item Given we have the following predicates and functions with their corresponding meanings
+    \begin{itemize}
+        \item $D(x,y)$: $x$ is the defense attorney of case $y$;
+        \item $P(x,y)$: $x$ is the prosecutor of case $y$;
+        \item $J(x,y)$: $x$ judges case $y$;
+        \item $W(x,y)$: $x$ is a witness in case $y$;
+        \item $d(x)$: returns the defendant of case $x$.
+        \item $w(x)$: returns the star-witness of case $x$;
+        \item $c(x)$: returns the last case person $x$ was the star-witness in;
+    \end{itemize}
+    Give translations to first-order logic of the following sentences using only the predicates and functions given (and possibly the $=$-sign). You may introduce constants to denote proper names where necessary
+    \begin{enumerate}
+        \item Phoenix is a defense attorney
+        \begin{itemize}
+            \item $\exists x \exists y (D(x,y) ^ (x = Phoenix))$
+        \end{itemize}
+        \item Lotta is not a witness in case Skye
+        \begin{itemize}
+            \item $\exists x \exists y (\neg W(x,y) ^ (x = Lotta, y = Skye))$. The predicate can also be written as: $\exists x \exists y (\neg W(L, S))$, however this is a bit more unclear as the constants are not declared and $x$ and $y$ are not specifically used in the predicate W.
+        \end{itemize}
+        \item The Fey case and the Engarde case featured the same star witness.
+        \begin{itemize}
+            \item $\exists x \exists y \exists z ((W(x, y) \land W(x, y) \land (x = (w(y) \land w(x)) \land y = Fey, z = engarde \land (y \neq z))))$
+        \end{itemize}
+        \item Nobody is the defense attorney for a case that (s)he prosecuted.
+        \begin{itemize}
+            \item $\forall x \exists y ( D(x,y) \to \neg P(x,y))$
+        \end{itemize}
+        \item There is someone who is now the defendant of a case, after being the star-witness in another case.
+        \begin{itemize}
+            \item $\exists x \exists y \exists z (D(x,y) \land W(x,z ^ (y \neq z \land x = w(x)))) $
+        \end{itemize}
+        \item Godot has prosecuted exactly one case.
+        \begin{itemize}
+            \item $\exists x \exists y (P(x,y) \land (x = godot) \land \forall z (P(x,z) \to y = z))$
+        \end{itemize}
+        \item People who have been a defendant in at least one case always end as a defense attorney, prosecutor or judge in another case.
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{enumerate}
+    \item Give the negation of each of the following formulae.
+    \begin{enumerate}
+        \item $\exists x\forall y(P(x,y)\iff Q(x,y))$.
+        \begin{itemize}
+            \item $\equiv \exists x\forall y((P(x,y) \to Q(x,y)) \land (Q(x,y) \to P(x,y)))$
+            \item $\neg (\exists x\forall y((P(x,y) \to Q(x,y)) \land (Q(x,y) \to P(x,y))))$
+            \item $\equiv \forall x\exists y((\neg P(x,y) \to \neg Q(x,y)) \lor (\neg Q(x,y) \to \neg P(x,y)))$
+            \item $\equiv \forall x\exists y(( P(x,y) \land \neg Q(x,y)) \lor (Q(x,y) \land \neg P(x,y)))$
+        \end{itemize}
+        \item $\forall y\exists x(P(x,y)\to\neg\exists x(Q(x,y)\vee(x=y)))$.
+        \begin{itemize}
+            \item $\equiv \forall y\exists x(\neg P(x,y)\lor \neg\exists x(Q(x,y)\vee(x=y)))$
+            \item $\neg (\forall y\exists x(\neg P(x,y)\lor \neg\exists x(Q(x,y)\vee(x=y))))$
+            \item $\equiv \exists y\forall x( P(x,y)\land \neg\forall x(\neg Q(x,y)\land (x \neq y)))$
+        \end{itemize}
+        \item $\exists x(R(x)\vee\forall y(P(x,y)\wedge(f(x,y)=y)))$.
+        \begin{itemize}
+            \item $ \neg (\exists x(R(x)\vee\forall y(P(x,y)\wedge(f(x,y)=y))))$
+            \item $\equiv \forall x(\neg R(x)\land\exists y(\neg P(x,y)\lor (f(x,y) \neq y)))$.
+        \end{itemize}
+        \item $\exists x\forall y(\neg P(x,y)\iff\neg Q(x,y))$. 
+        \begin{itemize}
+            \item $\equiv \exists x\forall y((\neg P(x,y) \to \neg Q(x,y) \land (\neg Q(x,y) \to P(x,y))))$
+            \item $\equiv \exists x\forall y(( P(x,y) \lor \neg Q(x,y) \land ( Q(x,y) \lor P(x,y))))$
+            \item $\neg (\exists x\forall y(( P(x,y) \lor \neg Q(x,y) \land ( Q(x,y) \lor P(x,y)))))$.
+            \item $\equiv \forall x\exists y(( \neg P(x,y) \land  Q(x,y) \lor ( \neg Q(x,y) \land P(x,y))))$.
+        \end{itemize}
+        \item $\forall x\forall y\exists z(S(x,y,z)\to(R(z)\vee\neg P(z)))$.
+        \begin{itemize}
+            \item $\equiv \forall x\forall y\exists z(\neg S(x,y,z)\lor(R(z)\vee\neg P(z)))$
+            \item $\neg (\forall x\forall y\exists z(\neg S(x,y,z)\lor(R(z)\vee\neg P(z))))$
+            \item $\equiv (\exists x\exists y\forall z( S(x,y,z)\land(\neg R(z)\vee P(z))))$
+        \end{itemize}
+    \end{enumerate}
+    \item Suppose we have a structure $\mathcal{A}$, with the domain $D=\{a,b,c,d,e\}$ and predicates $P=\{a,d\}$, $Q=\{(a,b),(d,e),(a,c),(b,c)\}$ and $R=\{(a,d),(b,e),(c,a),(d,b),(e,c)\}$.
+
+    For each of the following formulas, indicate whether they are true in $\mathcal{A}$. If a formula is true, explain why, and if it is not, give a suitable counterexample
+    \begin{enumerate}
+        \item $\forall x(P(x)\to\exists y(Q(x,y)))$.\\
+        The given formula is True as there does exist a tuple for every value of predicate $P$ of which that value is the first value of the tuple with any given $y$ value.
+        \item $\forall x\forall y(Q(x,y)\to\neg R(x,y))$.\\
+        The stated formula is true as there does not exist any combination of the values $x$ and $y$ in predicate $Q(x,y)$ which is also present in predicate $R(x,y)$, hence the statement is true (on the basis of the rules of an implication).
+        \item $\forall x(P(x)\to\forall y(Q(x,y)\vee\neg R(x,y)))$. \\
+        The given statement is True as for any value in predicate $P(x)$ there does exists a tuple with said $x$ at the first position of the tuple and any other given $y$, which are: $\{(a,b), (a,c), (d,e)\} $.
+        There does also exist a tuple in predicate $R(x,y)$, however due to the negation and the $\lor$ operator these can be left out as the other statement already makes the formula true.
+        \item $(\neg P(a)\vee\neg\exists x\forall yQ(x,y))\iff\exists x(Q(a,x)\wedge R(c,x))$. \\
+        The given formula is False on the basis that one sides of the bi-directional implication is false with the other being true (rules of a bi-directional implication).
+        To start, $\neg P(a)$ is false as there does exist a value $a$ in the list of predicate $P$.
+        Second, the statement $\neg (\exists x\forall yQ((x,y)))$ is false (as there does not exists a value which is present as $x$ for all other values of the domain in the $y$ position). However due to the negation it becomes true, this makes the Left Hand Side of the statement true.
+        However, the Right Hand Side of the statement is False as there does not exist a value for $x$ which is present in a tuple with value $a$ on the first position in predicate $R(a,x)$ and the same is true for predicate $R(c,x)$.
+        As the RHS is False with the RHS being true for the given formula, hence the formula is False (based om the rules of a bi-directional implication).
+        \item $(P(d)\wedge\exists yR(y,d))\to\forall x(R(x,c))$.\\
+        The given formula is False.
+        To start, the value $d$ is valid for predicate $P$, there does also exist a value for $y$ for which the statement $R(y,d)$ is true, the statement is true as predicate $R$ contains the tuple $(a,d)$.
+        This makes the Left Hand Side (LHS) of the statement true.
+        However, the Right Hand Side (RHS) is False as there do not exist tuples for all possible values of $x$ which have $c$ as the second value for predicate $R(x,c)$.
+        As the RHS needs to be true as it is necessary for the formula to hold (rules of an implication), therefore the formula is False.
+    \end{enumerate}
+\end{enumerate}
 \end{document}
