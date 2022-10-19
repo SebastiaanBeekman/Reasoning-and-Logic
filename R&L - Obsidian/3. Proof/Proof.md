@@ -10,4 +10,3 @@ In this chapter, we’ll look at some approaches and techniques that can be used
 - [[Application - Recursion and Induction]]
 - [[Recursive Definitions]]
 - [[Trees]]
-- 
