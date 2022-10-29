@@ -1,0 +1,1 @@
+Let *A* be a set and let $\mathcal{R}$ be an equivalence relation on *A*. Then the collection of all equivalence classes under $\mathcal{R}$ is a partition of *A*.
